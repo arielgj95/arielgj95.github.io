@@ -1,13 +1,18 @@
 ---
 layout: page
 title: submenus
-nav: false
+nav: true
 nav_order: 8
 dropdown: true
 children:
-  - title: bookshelf
-    permalink: /books/
-  - title: divider
-  - title: blog
-    permalink: /blog/
+  - title: Homepage
+    permalink: /about/
+  - title: News
+    permalink: /news/
+  - title: Cv
+    permalink: /cv/
+  - title: Publications
+    permalink: /publications/
+  - title: Teaching
+    permalink: /teaching/
 ---

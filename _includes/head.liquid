@@ -71,9 +71,14 @@
 <link
   rel="icon"
   type="image/png"
-  sizes="32x32"
+  sizes="1024x1024"
   href="/assets/img/profile-pic_2.png"
 >
+
+<link rel="icon" href="/assets/img/profile-pic_2.png" sizes="32x32">
+<link rel="icon" href="/assets/img/profile-pic_2.png" sizes="16x16">
+<link rel="icon" href="/assets/img/profile-pic_2.png" sizes="96x96">
+<link rel="icon" href="/assets/img/profile-pic_2.png" sizes="48x48">
 
 <!-- Code Syntax Highlighting -->
 <link
@@ -111,7 +116,8 @@
   <link rel="shortcut icon" href="{{ site.icon | prepend: '/assets/img/' | relative_url | bust_file_cache}}">
 {% endif %}
 <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url | bust_css_cache }}">
-<link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
+<!-- link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}" -->
+<link rel="canonical" href="https://www.arielgjaci.com/">
 
 <!-- Dark Mode -->
 <script src="{{ '/assets/js/theme.js' | relative_url | bust_file_cache }}"></script>

@@ -1,15 +1,15 @@
 ---
 layout: page
-title: submenus
+title: ""
 nav: true
 nav_order: 8
 dropdown: true
 children:
   - title: Homepage
-    permalink: /about/
+    permalink: /
   - title: News
     permalink: /news/
-  - title: Cv
+  - title: CV
     permalink: /cv/
   - title: Publications
     permalink: /publications/

@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Opened my webpage! 🎉
+Opened my webpage! 🔍

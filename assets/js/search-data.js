@@ -35,7 +35,7 @@ ninja.data = [{
               description: "",
               section: "Dropdown",
               handler: () => {
-                window.location.href = "/about/";
+                window.location.href = "/";
               },
             },{id: "dropdown-news",
               title: "News",
@@ -45,7 +45,7 @@ ninja.data = [{
                 window.location.href = "/news/";
               },
             },{id: "dropdown-cv",
-              title: "Cv",
+              title: "CV",
               description: "",
               section: "Dropdown",
               handler: () => {

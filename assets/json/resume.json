@@ -85,8 +85,7 @@
       "area": "AI-Robotics",
       "studyType": "Visiting Ph.D.",
       "startDate": "2022-01-10",
-      "endDate": "2023-04-01",
-      "courses": ["Theory of Relativity"]
+      "endDate": "2023-04-01"
     },
     {
       "institution": "University of Genoa",
@@ -253,13 +252,7 @@
     {
       "name": "Machine Learning",
       "icon": "fa-solid fa-tag",
-      "keywords": [
-        "Generative models",
-        "Multimodal models",
-        "Large Language models",
-        "Domain Generalization",
-        "Reinforcement Learning"
-      ]
+      "keywords": ["Generative models", "Multimodal models", "Large Language models", "Domain Generalization", "Reinforcement Learning"]
     },
     {
       "name": "Robotics",

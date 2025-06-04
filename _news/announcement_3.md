@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Started a new position as Postdoctoral Researcher at Italian Institute of Technology (IIT) 💼 
+Started a new position as Postdoctoral Researcher at Italian Institute of Technology (IIT) 💼

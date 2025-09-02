@@ -3,13 +3,13 @@
 
 <title>Ariel Gjaci</title>
 
-<meta name="application-name" content="Ariel Gjaci">
+<!-- meta name="application-name" content="Ariel Gjaci" -->
 <meta property="og:site_name" content="Ariel Gjaci">
-<meta name="description" content="Ariel Gjaci - Researcher in Computational Acoustics, Computer Vision, and Robotics">
-<meta name="author" content="Ariel Gjaci">
-<meta property="og:title" content="Ariel Gjaci">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://arielgjaci.com">
+<!-- meta name="description" content="Ariel Gjaci - Researcher in Computational Acoustics, Computer Vision, and Robotics" -->
+<!-- meta name="author" content="Ariel Gjaci" -->
+<!-- meta property="og:title" content="Ariel Gjaci" -->
+<!-- meta property="og:type" content="website" -->
+<meta property="og:url" content="https://arielgjaci.com/">
 <!--
   script type="application/ld+json">
     {
@@ -34,10 +34,26 @@
 <script type="application/ld+json">
   {
     "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Ariel Gjaci",
+    "alternateName": "arielgjaci.com",
+    "url": "https://arielgjaci.com/"
+  }
+</script>
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
     "@type": "Person",
     "name": "Ariel Gjaci",
-    "url": "https://arielgjaci.com",
-    "sameAs": ["https://github.com/arielgj95", "https://scholar.google.it/citations?user=m_JznlkAAAAJ&hl"]
+    "url": "https://arielgjaci.com/",
+    "sameAs": [
+      "https://scholar.google.com/citations?user=m_JznlkAAAAJ",
+      "https://orcid.org/0000-0001-9794-5200",
+      "https://www.linkedin.com/in/ariel-gjaci-43326019b/"
+    ],
+    "jobTitle": "Postdoctoral Researcher",
+    "affiliation": { "@type": "Organization", "name": "Istituto Italiano di Tecnologia" }
   }
 </script>
 
@@ -119,8 +135,7 @@
   <link rel="shortcut icon" href="{{ site.icon | prepend: '/assets/img/' | relative_url | bust_file_cache}}">
 {% endif %}
 <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url | bust_css_cache }}">
-<!-- link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}" -->
-<link rel="canonical" href="https://www.arielgjaci.com/">
+<link rel="canonical" href="https://arielgjaci.com/">
 
 <!-- Dark Mode -->
 <script src="{{ '/assets/js/theme.js' | relative_url | bust_file_cache }}"></script>

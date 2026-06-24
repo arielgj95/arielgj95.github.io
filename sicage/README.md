@@ -1,6 +1,6 @@
 # SICAGE project page
 
-Static project page for **SICAGE: Speaker-Independent Culture-Aware Gesture Generation using TED4C-L Dataset**.
+Static project page for **SICAGE: Speaker-Independent Culture-Aware Gesture Generation using TED4C-L Dataset**, accepted at ECCV 2026 by Ariel Gjaci, Antonio Sgorbissa, and Vittorio Murino.
 
 - Live page: <https://arielgj95.github.io/sicage/>
 - Code: <https://github.com/arielgj95/SICAGE>

@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="SICAGE learns speaker-independent cultural representations for culture-aware co-speech gesture generation on TED4C-L.">
+  <meta name="author" content="Ariel Gjaci, Antonio Sgorbissa, Vittorio Murino">
   <meta name="keywords" content="SICAGE, co-speech gesture generation, culture-aware AI, diffusion, TED4C-L, ECCV 2026">
   <meta property="og:title" content="SICAGE - Speaker-Independent Culture-Aware Gesture Generation">
   <meta property="og:description" content="A modular framework and 106-hour dataset for speaker-independent, culture-aware gesture generation.">
@@ -12,6 +13,7 @@
   <meta property="og:image" content="https://arielgj95.github.io/sicage/static/images/sicage-pipeline.png">
   <meta name="theme-color" content="#081a2c">
   <title>SICAGE | Culture-Aware Gesture Generation</title>
+  <link rel="icon" href="../assets/img/favicon.ico" sizes="any">
   <script>document.documentElement.classList.add('js');</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -40,12 +42,12 @@
       <div class="hero-glow hero-glow-one" aria-hidden="true"></div>
       <div class="hero-glow hero-glow-two" aria-hidden="true"></div>
       <div class="hero-copy reveal">
-        <p class="eyebrow">ECCV 2026 submission · Paper #8226</p>
+        <p class="eyebrow">Accepted at ECCV 2026</p>
         <h1>Speaker-independent<br><span>culture-aware</span> gestures.</h1>
         <p class="hero-summary">
-          SICAGE separates shared cultural cues from individual speaker style, then uses them to condition real-time co-speech gesture generation.
+          SICAGE learns cultural cues that carry across speakers and uses them to generate co-speech gestures from audio and text.
         </p>
-        <p class="review-note">Anonymous submission · author details will be added after review.</p>
+        <p class="review-note">Ariel Gjaci · Antonio Sgorbissa · Vittorio Murino</p>
         <div class="link-row" aria-label="Project links">
           <a class="button button-primary placeholder-link" href="#" data-placeholder-message="The arXiv manuscript is coming soon." aria-label="arXiv manuscript, coming soon">
             <span class="button-icon" aria-hidden="true">↗</span> arXiv <small>soon</small>
@@ -63,20 +65,20 @@
         <div><strong>106.45</strong><span>hours</span></div>
         <div><strong>764</strong><span>speakers</span></div>
         <div><strong>4</strong><span>cultural groups</span></div>
-        <div><strong>659k</strong><span>motion windows</span></div>
+        <div><strong>659k</strong><span>data samples</span></div>
       </div>
     </section>
 
     <section class="section intro-section" id="abstract">
       <div class="section-label">01 · Motivation</div>
       <div class="intro-grid">
-        <h2>Culture without memorizing the speaker.</h2>
+        <h2>Learning what a group shares, not who is speaking.</h2>
         <div class="prose">
           <p>
-            Culture-conditioned gesture models are often evaluated with the same speakers in training and testing. That makes it difficult to know whether a model learned shared cultural patterns or simply remembered individual gesturing styles.
+            People from the same culture do not gesture in exactly the same way. When the same speakers appear in training and test data, a model can seem culture-aware simply because it recognizes their individual style.
           </p>
           <p>
-            SICAGE treats each speaker as a separate domain. Fishr or adversarial regularization keeps cultural representations discriminative while reducing speaker dependence. ALaDiT then combines those embeddings with speech, text, and a short motion seed to synthesize aligned upper-body gestures in real time.
+            SICAGE prevents that shortcut by keeping speakers disjoint across splits and treating each speaker as a domain. Fishr or adversarial training learns culture-relevant cues from audio and text that transfer to unseen speakers. ALaDiT then uses those cues, together with the speech context and a short motion seed, to generate synchronized upper-body gestures.
           </p>
         </div>
       </div>
@@ -88,11 +90,13 @@
           <div class="section-label">02 · Method</div>
           <h2>One modular pipeline.</h2>
         </div>
-        <p>Every component is replaceable: dataset processing, culture encoder, and motion generator.</p>
+        <p>The dataset pipeline, culture encoder, and motion generator can each be replaced or studied separately.</p>
       </div>
 
       <figure class="pipeline-card reveal">
-        <img src="./static/images/sicage-pipeline.png" alt="SICAGE pipeline from TED4C-L multimodal inputs through speaker-independent culture encoding to ALaDiT gesture generation" width="1355" height="1280">
+        <div class="pipeline-media">
+          <img src="./static/images/sicage-pipeline.png" alt="SICAGE pipeline from TED4C-L multimodal inputs through speaker-independent culture encoding to ALaDiT gesture generation" width="1600" height="1200">
+        </div>
         <figcaption>SICAGE extracts multimodal context, regularizes culture embeddings across speaker domains, and conditions motion synthesis.</figcaption>
       </figure>
 
@@ -100,12 +104,12 @@
         <article class="method-card reveal">
           <span class="method-number">1</span>
           <h3>Build TED4C-L</h3>
-          <p>Five-second windows pair 3D upper-body motion with audio, prosody, text embeddings, culture, and speaker identity.</p>
+          <p>Each five-second sample pairs 3D upper-body motion with audio, prosody, text embeddings, culture, and speaker identity.</p>
         </article>
         <article class="method-card reveal">
           <span class="method-number">2</span>
           <h3>Generalize across speakers</h3>
-          <p>Fishr or adversarial learning extracts culture-discriminative audio/text cues while suppressing speaker-specific shortcuts.</p>
+          <p>Fishr or adversarial training keeps the audio/text representation useful for culture prediction while reducing speaker-specific shortcuts.</p>
         </article>
         <article class="method-card reveal">
           <span class="method-number">3</span>
@@ -157,10 +161,10 @@
 
       <div class="ablation-panel reveal">
         <div>
-          <p class="eyebrow">Rebuttal ablations</p>
-          <h3>The gain is not just a label or alignment loss.</h3>
+          <p class="eyebrow">What the controls show</p>
+          <h3>Several controls helped us pin down the improvement.</h3>
         </div>
-        <p>FI improves FGD over OneHot (1.63 → 1.03) and NoDG (1.56 → 1.03). Removing ALaDiT alignment also degrades FGD to 1.36. Adding alignment to DSG+/FI improves its FGD from 4.89 to 2.52, but it remains behind ALaDiT/FI.</p>
+        <p>Giving ALaDiT only a culture label does not reproduce the Fishr result: FGD is 1.63 with OneHot and 1.03 with FI. The same model reaches 1.56 when its audio/text encoder is trained without speaker regularization. Alignment matters too—removing it raises FGD to 1.36—but it does not explain the whole improvement. Adding alignment to DSG+ lowers FGD from 4.89 to 2.52, still above ALaDiT/FI.</p>
       </div>
     </section>
 
@@ -222,7 +226,7 @@
           <div class="section-label">06 · Reproducibility</div>
           <h2>Every reported row has a recipe.</h2>
         </div>
-        <p>The repository documents the complete raw-data pipeline, all main-paper models, and every rebuttal control.</p>
+        <p>The README covers the full data pipeline, the main models, and the OneHot, NoDG, NoAlign, and DSG+/FI+Align controls.</p>
       </div>
       <div class="repro-grid">
         <a href="https://github.com/arielgj95/SICAGE#result-to-run-map" target="_blank" rel="noopener"><span>01</span><strong>Result map</strong><small>Expected values and run directories</small></a>
@@ -236,14 +240,14 @@
       <div>
         <div class="section-label">Citation</div>
         <h2>BibTeX</h2>
-        <p>Temporary anonymous citation while the manuscript is under review.</p>
+        <p>Accepted at ECCV 2026.</p>
       </div>
-      <pre><code>@misc{anonymous2026sicage,
-  title  = {SICAGE: Speaker-Independent Culture-Aware
-            Gesture Generation using TED4C-L Dataset},
-  author = {Anonymous},
-  note   = {ECCV 2026 submission 8226},
-  year   = {2026}
+      <pre><code>@inproceedings{gjaci2026sicage,
+  author    = {Gjaci, Ariel and Sgorbissa, Antonio and Murino, Vittorio},
+  title     = {SICAGE: Speaker-Independent Culture-Aware
+               Gesture Generation using TED4C-L Dataset},
+  booktitle = {European Conference on Computer Vision (ECCV)},
+  year      = {2026}
 }</code></pre>
     </section>
   </main>

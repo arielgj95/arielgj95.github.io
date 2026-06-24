@@ -1,258 +1,337 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="SICAGE learns speaker-independent cultural representations for culture-aware co-speech gesture generation on TED4C-L.">
-  <meta name="keywords" content="SICAGE, co-speech gesture generation, culture-aware AI, diffusion, TED4C-L, ECCV 2026">
-  <meta property="og:title" content="SICAGE - Speaker-Independent Culture-Aware Gesture Generation">
-  <meta property="og:description" content="A modular framework and 106-hour dataset for speaker-independent, culture-aware gesture generation.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://arielgj95.github.io/sicage/">
-  <meta property="og:image" content="https://arielgj95.github.io/sicage/static/images/sicage-pipeline.png">
-  <meta name="theme-color" content="#081a2c">
-  <title>SICAGE | Culture-Aware Gesture Generation</title>
-  <script>document.documentElement.classList.add('js');</script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Manrope:wght@500;600;700;800&amp;display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./static/css/index.css">
-  <script defer src="./static/js/index.js"></script>
-</head>
-<body>
-  <a class="skip-link" href="#main">Skip to content</a>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="SICAGE learns speaker-independent cultural representations for culture-aware co-speech gesture generation on TED4C-L."
+    />
+    <meta name="author" content="Ariel Gjaci, Antonio Sgorbissa, Vittorio Murino" />
+    <meta name="keywords" content="SICAGE, co-speech gesture generation, culture-aware AI, diffusion, TED4C-L, ECCV 2026" />
+    <meta property="og:title" content="SICAGE - Speaker-Independent Culture-Aware Gesture Generation" />
+    <meta property="og:description" content="A modular framework and 106-hour dataset for speaker-independent, culture-aware gesture generation." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://arielgj95.github.io/sicage/" />
+    <meta property="og:image" content="https://arielgj95.github.io/sicage/static/images/sicage-pipeline.png" />
+    <meta name="theme-color" content="#081a2c" />
+    <title>SICAGE | Culture-Aware Gesture Generation</title>
+    <link rel="icon" href="../assets/img/favicon.ico" sizes="any" />
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Manrope:wght@500;600;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./static/css/index.css" />
+    <script defer src="./static/js/index.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
 
-  <header class="site-header" aria-label="Primary navigation">
-    <a class="wordmark" href="#top" aria-label="SICAGE home">
-      <span class="wordmark-mark" aria-hidden="true">S</span>
-      <span>SICAGE</span>
-    </a>
-    <nav>
-      <a href="#method">Method</a>
-      <a href="#results">Results</a>
-      <a href="#videos">Videos</a>
-      <a href="#reproduce">Reproduce</a>
-    </nav>
-  </header>
+    <header class="site-header" aria-label="Primary navigation">
+      <a class="wordmark" href="#top" aria-label="SICAGE home">
+        <span class="wordmark-mark" aria-hidden="true">S</span>
+        <span>SICAGE</span>
+      </a>
+      <nav>
+        <a href="#method">Method</a>
+        <a href="#results">Results</a>
+        <a href="#videos">Videos</a>
+        <a href="#reproduce">Reproduce</a>
+      </nav>
+    </header>
 
-  <main id="main">
-    <section class="hero" id="top">
-      <div class="hero-glow hero-glow-one" aria-hidden="true"></div>
-      <div class="hero-glow hero-glow-two" aria-hidden="true"></div>
-      <div class="hero-copy reveal">
-        <p class="eyebrow">ECCV 2026 submission · Paper #8226</p>
-        <h1>Speaker-independent<br><span>culture-aware</span> gestures.</h1>
-        <p class="hero-summary">
-          SICAGE separates shared cultural cues from individual speaker style, then uses them to condition real-time co-speech gesture generation.
-        </p>
-        <p class="review-note">Anonymous submission · author details will be added after review.</p>
-        <div class="link-row" aria-label="Project links">
-          <a class="button button-primary placeholder-link" href="#" data-placeholder-message="The arXiv manuscript is coming soon." aria-label="arXiv manuscript, coming soon">
-            <span class="button-icon" aria-hidden="true">↗</span> arXiv <small>soon</small>
-          </a>
-          <a class="button" href="https://github.com/arielgj95/SICAGE" target="_blank" rel="noopener">
-            <span class="button-icon" aria-hidden="true">⌘</span> Code
-          </a>
-          <a class="button" href="https://huggingface.co/datasets/ariel-95/TED4C-L" target="_blank" rel="noopener">
-            <span class="button-icon" aria-hidden="true">◫</span> Dataset
-          </a>
-        </div>
-      </div>
-
-      <div class="hero-facts reveal" aria-label="TED4C-L dataset statistics">
-        <div><strong>106.45</strong><span>hours</span></div>
-        <div><strong>764</strong><span>speakers</span></div>
-        <div><strong>4</strong><span>cultural groups</span></div>
-        <div><strong>659k</strong><span>motion windows</span></div>
-      </div>
-    </section>
-
-    <section class="section intro-section" id="abstract">
-      <div class="section-label">01 · Motivation</div>
-      <div class="intro-grid">
-        <h2>Culture without memorizing the speaker.</h2>
-        <div class="prose">
-          <p>
-            Culture-conditioned gesture models are often evaluated with the same speakers in training and testing. That makes it difficult to know whether a model learned shared cultural patterns or simply remembered individual gesturing styles.
+    <main id="main">
+      <section class="hero" id="top">
+        <div class="hero-glow hero-glow-one" aria-hidden="true"></div>
+        <div class="hero-glow hero-glow-two" aria-hidden="true"></div>
+        <div class="hero-copy reveal">
+          <p class="eyebrow">Accepted at ECCV 2026</p>
+          <h1>Speaker-independent<br /><span>culture-aware</span> gestures.</h1>
+          <p class="hero-summary">
+            SICAGE learns cultural cues that carry across speakers and uses them to generate co-speech gestures from audio and text.
           </p>
+          <p class="review-note">Ariel Gjaci · Antonio Sgorbissa · Vittorio Murino</p>
+          <div class="link-row" aria-label="Project links">
+            <a
+              class="button button-primary placeholder-link"
+              href="#"
+              data-placeholder-message="The arXiv manuscript is coming soon."
+              aria-label="arXiv manuscript, coming soon"
+            >
+              <span class="button-icon" aria-hidden="true">↗</span> arXiv <small>soon</small>
+            </a>
+            <a class="button" href="https://github.com/arielgj95/SICAGE" target="_blank" rel="noopener">
+              <span class="button-icon" aria-hidden="true">⌘</span> Code
+            </a>
+            <a class="button" href="https://huggingface.co/datasets/ariel-95/TED4C-L" target="_blank" rel="noopener">
+              <span class="button-icon" aria-hidden="true">◫</span> Dataset
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-facts reveal" aria-label="TED4C-L dataset statistics">
+          <div><strong>106.45</strong><span>hours</span></div>
+          <div><strong>764</strong><span>speakers</span></div>
+          <div><strong>4</strong><span>cultural groups</span></div>
+          <div><strong>659k</strong><span>data samples</span></div>
+        </div>
+      </section>
+
+      <section class="section intro-section" id="abstract">
+        <div class="section-label">01 · Motivation</div>
+        <div class="intro-grid">
+          <h2>Learning what a group shares, not who is speaking.</h2>
+          <div class="prose">
+            <p>
+              People from the same culture do not gesture in exactly the same way. When the same speakers appear in training and test data, a model
+              can seem culture-aware simply because it recognizes their individual style.
+            </p>
+            <p>
+              SICAGE prevents that shortcut by keeping speakers disjoint across splits and treating each speaker as a domain. Fishr or adversarial
+              training learns culture-relevant cues from audio and text that transfer to unseen speakers. ALaDiT then uses those cues, together with
+              the speech context and a short motion seed, to generate synchronized upper-body gestures.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section pipeline-section" id="method">
+        <div class="section-heading">
+          <div>
+            <div class="section-label">02 · Method</div>
+            <h2>One modular pipeline.</h2>
+          </div>
+          <p>The dataset pipeline, culture encoder, and motion generator can each be replaced or studied separately.</p>
+        </div>
+
+        <figure class="pipeline-card reveal">
+          <div class="pipeline-media">
+            <img
+              src="./static/images/sicage-pipeline.png"
+              alt="SICAGE pipeline from TED4C-L multimodal inputs through speaker-independent culture encoding to ALaDiT gesture generation"
+              width="1600"
+              height="1200"
+            />
+          </div>
+          <figcaption>
+            SICAGE extracts multimodal context, regularizes culture embeddings across speaker domains, and conditions motion synthesis.
+          </figcaption>
+        </figure>
+
+        <div class="method-grid">
+          <article class="method-card reveal">
+            <span class="method-number">1</span>
+            <h3>Build TED4C-L</h3>
+            <p>Each five-second sample pairs 3D upper-body motion with audio, prosody, text embeddings, culture, and speaker identity.</p>
+          </article>
+          <article class="method-card reveal">
+            <span class="method-number">2</span>
+            <h3>Generalize across speakers</h3>
+            <p>
+              Fishr or adversarial training keeps the audio/text representation useful for culture prediction while reducing speaker-specific
+              shortcuts.
+            </p>
+          </article>
+          <article class="method-card reveal">
+            <span class="method-number">3</span>
+            <h3>Generate with ALaDiT</h3>
+            <p>A 50-step diffusion model aligns motion with low-level audio and high-level text/culture context in under 14 ms.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section results-section" id="results">
+        <div class="section-heading light-heading">
+          <div>
+            <div class="section-label">03 · Results</div>
+            <h2>Fishr gives the strongest balance.</h2>
+          </div>
+          <p>Mean ± standard deviation over 10 matched speaker-disjoint test runs. Lower FGD is better; all other metrics are higher-is-better.</p>
+        </div>
+
+        <div class="result-callouts">
+          <article>
+            <span>Best realism</span>
+            <strong>1.03</strong>
+            <p>FGD for ALaDiT/FI</p>
+          </article>
+          <article>
+            <span>Best cultural expressivity</span>
+            <strong>44.61%</strong>
+            <p>CE F1 for ALaDiT/FI</p>
+          </article>
+          <article>
+            <span>Real-time synthesis</span>
+            <strong>&lt;14 ms</strong>
+            <p>for four seconds of motion</p>
+          </article>
+        </div>
+
+        <div class="table-wrap" role="region" aria-label="Main ALaDiT results" tabindex="0">
+          <table>
+            <thead>
+              <tr>
+                <th>Model</th>
+                <th>FGD ↓</th>
+                <th>Diversity ↑</th>
+                <th>CE F1 ↑</th>
+                <th>BAS ↑</th>
+                <th>SRGR ↑</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>ALaDiT / NC</td>
+                <td>1.60 ± .18</td>
+                <td>109.50 ± .68</td>
+                <td>43.41 ± 1.10</td>
+                <td>22.51 ± .15</td>
+                <td>67.72 ± .23</td>
+              </tr>
+              <tr class="best-row">
+                <td><span class="result-badge">best balance</span> ALaDiT / FI</td>
+                <td><strong>1.03 ± .15</strong></td>
+                <td>110.27 ± .70</td>
+                <td><strong>44.61 ± .95</strong></td>
+                <td><strong>22.63 ± .22</strong></td>
+                <td><strong>68.09 ± .25</strong></td>
+              </tr>
+              <tr>
+                <td>ALaDiT / ADV</td>
+                <td>1.53 ± .17</td>
+                <td><strong>111.75 ± .71</strong></td>
+                <td>42.71 ± .95</td>
+                <td>22.45 ± .17</td>
+                <td>67.57 ± .27</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="ablation-panel reveal">
+          <div>
+            <p class="eyebrow">What the controls show</p>
+            <h3>Several controls helped us pin down the improvement.</h3>
+          </div>
           <p>
-            SICAGE treats each speaker as a separate domain. Fishr or adversarial regularization keeps cultural representations discriminative while reducing speaker dependence. ALaDiT then combines those embeddings with speech, text, and a short motion seed to synthesize aligned upper-body gestures in real time.
+            Giving ALaDiT only a culture label does not reproduce the Fishr result: FGD is 1.63 with OneHot and 1.03 with FI. The same model reaches
+            1.56 when its audio/text encoder is trained without speaker regularization. Alignment matters too—removing it raises FGD to 1.36—but it
+            does not explain the whole improvement. Adding alignment to DSG+ lowers FGD from 4.89 to 2.52, still above ALaDiT/FI.
           </p>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="section pipeline-section" id="method">
-      <div class="section-heading">
-        <div>
-          <div class="section-label">02 · Method</div>
-          <h2>One modular pipeline.</h2>
+      <section class="section video-section" id="videos">
+        <div class="section-heading">
+          <div>
+            <div class="section-label">04 · Qualitative comparisons</div>
+            <h2>Same speech. Four motion conditions.</h2>
+          </div>
+          <p>Each 25-second clip compares real motion, no-culture ALaDiT, adversarial culture embeddings, and Fishr embeddings.</p>
         </div>
-        <p>Every component is replaceable: dataset processing, culture encoder, and motion generator.</p>
-      </div>
 
-      <figure class="pipeline-card reveal">
-        <img src="./static/images/sicage-pipeline.png" alt="SICAGE pipeline from TED4C-L multimodal inputs through speaker-independent culture encoding to ALaDiT gesture generation" width="1355" height="1280">
-        <figcaption>SICAGE extracts multimodal context, regularizes culture embeddings across speaker domains, and conditions motion synthesis.</figcaption>
-      </figure>
-
-      <div class="method-grid">
-        <article class="method-card reveal">
-          <span class="method-number">1</span>
-          <h3>Build TED4C-L</h3>
-          <p>Five-second windows pair 3D upper-body motion with audio, prosody, text embeddings, culture, and speaker identity.</p>
-        </article>
-        <article class="method-card reveal">
-          <span class="method-number">2</span>
-          <h3>Generalize across speakers</h3>
-          <p>Fishr or adversarial learning extracts culture-discriminative audio/text cues while suppressing speaker-specific shortcuts.</p>
-        </article>
-        <article class="method-card reveal">
-          <span class="method-number">3</span>
-          <h3>Generate with ALaDiT</h3>
-          <p>A 50-step diffusion model aligns motion with low-level audio and high-level text/culture context in under 14 ms.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="section results-section" id="results">
-      <div class="section-heading light-heading">
-        <div>
-          <div class="section-label">03 · Results</div>
-          <h2>Fishr gives the strongest balance.</h2>
+        <div class="video-grid">
+          <article class="video-card reveal">
+            <div class="video-title"><span>India</span><small>Hindi</small></div>
+            <video controls playsinline preload="metadata" poster="./static/images/indian-poster.jpg">
+              <source src="./static/videos/indian-comparison.mp4" type="video/mp4" />
+            </video>
+          </article>
+          <article class="video-card reveal">
+            <div class="video-title"><span>Italy</span><small>Italian</small></div>
+            <video controls playsinline preload="metadata" poster="./static/images/italian-poster.jpg">
+              <source src="./static/videos/italian-comparison.mp4" type="video/mp4" />
+            </video>
+          </article>
+          <article class="video-card reveal">
+            <div class="video-title"><span>Japan</span><small>Japanese</small></div>
+            <video controls playsinline preload="metadata" poster="./static/images/japanese-poster.jpg">
+              <source src="./static/videos/japanese-comparison.mp4" type="video/mp4" />
+            </video>
+          </article>
+          <article class="video-card reveal">
+            <div class="video-title"><span>Turkey</span><small>Turkish</small></div>
+            <video controls playsinline preload="metadata" poster="./static/images/turkish-poster.jpg">
+              <source src="./static/videos/turkish-comparison.mp4" type="video/mp4" />
+            </video>
+          </article>
         </div>
-        <p>Mean ± standard deviation over 10 matched speaker-disjoint test runs. Lower FGD is better; all other metrics are higher-is-better.</p>
-      </div>
+      </section>
 
-      <div class="result-callouts">
-        <article>
-          <span>Best realism</span>
-          <strong>1.03</strong>
-          <p>FGD for ALaDiT/FI</p>
-        </article>
-        <article>
-          <span>Best cultural expressivity</span>
-          <strong>44.61%</strong>
-          <p>CE F1 for ALaDiT/FI</p>
-        </article>
-        <article>
-          <span>Real-time synthesis</span>
-          <strong>&lt;14 ms</strong>
-          <p>for four seconds of motion</p>
-        </article>
-      </div>
-
-      <div class="table-wrap" role="region" aria-label="Main ALaDiT results" tabindex="0">
-        <table>
-          <thead>
-            <tr><th>Model</th><th>FGD ↓</th><th>Diversity ↑</th><th>CE F1 ↑</th><th>BAS ↑</th><th>SRGR ↑</th></tr>
-          </thead>
-          <tbody>
-            <tr><td>ALaDiT / NC</td><td>1.60 ± .18</td><td>109.50 ± .68</td><td>43.41 ± 1.10</td><td>22.51 ± .15</td><td>67.72 ± .23</td></tr>
-            <tr class="best-row"><td><span class="result-badge">best balance</span> ALaDiT / FI</td><td><strong>1.03 ± .15</strong></td><td>110.27 ± .70</td><td><strong>44.61 ± .95</strong></td><td><strong>22.63 ± .22</strong></td><td><strong>68.09 ± .25</strong></td></tr>
-            <tr><td>ALaDiT / ADV</td><td>1.53 ± .17</td><td><strong>111.75 ± .71</strong></td><td>42.71 ± .95</td><td>22.45 ± .17</td><td>67.57 ± .27</td></tr>
-          </tbody>
-        </table>
-      </div>
-
-      <div class="ablation-panel reveal">
-        <div>
-          <p class="eyebrow">Rebuttal ablations</p>
-          <h3>The gain is not just a label or alignment loss.</h3>
+      <section class="section dataset-section" id="dataset">
+        <div class="dataset-copy">
+          <div class="section-label">05 · TED4C-L</div>
+          <h2>A large, speaker-disjoint cultural gesture dataset.</h2>
+          <p>
+            TED4C-L contains 106.45 hours from 764 speakers across India, Italy, Japan, and Turkey. The public release provides numeric motion, audio,
+            and text representations with fixed speaker-independent splits.
+          </p>
+          <a class="text-link" href="https://huggingface.co/datasets/ariel-95/TED4C-L" target="_blank" rel="noopener"
+            >Explore the dataset <span aria-hidden="true">↗</span></a
+          >
         </div>
-        <p>FI improves FGD over OneHot (1.63 → 1.03) and NoDG (1.56 → 1.03). Removing ALaDiT alignment also degrades FGD to 1.36. Adding alignment to DSG+/FI improves its FGD from 4.89 to 2.52, but it remains behind ALaDiT/FI.</p>
-      </div>
-    </section>
-
-    <section class="section video-section" id="videos">
-      <div class="section-heading">
-        <div>
-          <div class="section-label">04 · Qualitative comparisons</div>
-          <h2>Same speech. Four motion conditions.</h2>
+        <div class="culture-list" aria-label="Cultural groups">
+          <span><i class="culture-dot india"></i>India <small>191 speakers</small></span>
+          <span><i class="culture-dot italy"></i>Italy <small>194 speakers</small></span>
+          <span><i class="culture-dot japan"></i>Japan <small>196 speakers</small></span>
+          <span><i class="culture-dot turkey"></i>Turkey <small>183 speakers</small></span>
         </div>
-        <p>Each 25-second clip compares real motion, no-culture ALaDiT, adversarial culture embeddings, and Fishr embeddings.</p>
-      </div>
+      </section>
 
-      <div class="video-grid">
-        <article class="video-card reveal">
-          <div class="video-title"><span>India</span><small>Hindi</small></div>
-          <video controls playsinline preload="metadata" poster="./static/images/indian-poster.jpg">
-            <source src="./static/videos/indian-comparison.mp4" type="video/mp4">
-          </video>
-        </article>
-        <article class="video-card reveal">
-          <div class="video-title"><span>Italy</span><small>Italian</small></div>
-          <video controls playsinline preload="metadata" poster="./static/images/italian-poster.jpg">
-            <source src="./static/videos/italian-comparison.mp4" type="video/mp4">
-          </video>
-        </article>
-        <article class="video-card reveal">
-          <div class="video-title"><span>Japan</span><small>Japanese</small></div>
-          <video controls playsinline preload="metadata" poster="./static/images/japanese-poster.jpg">
-            <source src="./static/videos/japanese-comparison.mp4" type="video/mp4">
-          </video>
-        </article>
-        <article class="video-card reveal">
-          <div class="video-title"><span>Turkey</span><small>Turkish</small></div>
-          <video controls playsinline preload="metadata" poster="./static/images/turkish-poster.jpg">
-            <source src="./static/videos/turkish-comparison.mp4" type="video/mp4">
-          </video>
-        </article>
-      </div>
-    </section>
-
-    <section class="section dataset-section" id="dataset">
-      <div class="dataset-copy">
-        <div class="section-label">05 · TED4C-L</div>
-        <h2>A large, speaker-disjoint cultural gesture dataset.</h2>
-        <p>TED4C-L contains 106.45 hours from 764 speakers across India, Italy, Japan, and Turkey. The public release provides numeric motion, audio, and text representations with fixed speaker-independent splits.</p>
-        <a class="text-link" href="https://huggingface.co/datasets/ariel-95/TED4C-L" target="_blank" rel="noopener">Explore the dataset <span aria-hidden="true">↗</span></a>
-      </div>
-      <div class="culture-list" aria-label="Cultural groups">
-        <span><i class="culture-dot india"></i>India <small>191 speakers</small></span>
-        <span><i class="culture-dot italy"></i>Italy <small>194 speakers</small></span>
-        <span><i class="culture-dot japan"></i>Japan <small>196 speakers</small></span>
-        <span><i class="culture-dot turkey"></i>Turkey <small>183 speakers</small></span>
-      </div>
-    </section>
-
-    <section class="section reproduce-section" id="reproduce">
-      <div class="section-heading">
-        <div>
-          <div class="section-label">06 · Reproducibility</div>
-          <h2>Every reported row has a recipe.</h2>
+      <section class="section reproduce-section" id="reproduce">
+        <div class="section-heading">
+          <div>
+            <div class="section-label">06 · Reproducibility</div>
+            <h2>Every reported row has a recipe.</h2>
+          </div>
+          <p>The README covers the full data pipeline, the main models, and the OneHot, NoDG, NoAlign, and DSG+/FI+Align controls.</p>
         </div>
-        <p>The repository documents the complete raw-data pipeline, all main-paper models, and every rebuttal control.</p>
-      </div>
-      <div class="repro-grid">
-        <a href="https://github.com/arielgj95/SICAGE#result-to-run-map" target="_blank" rel="noopener"><span>01</span><strong>Result map</strong><small>Expected values and run directories</small></a>
-        <a href="https://github.com/arielgj95/SICAGE#step-8-train-sicage-and-all-aladit-ablations" target="_blank" rel="noopener"><span>02</span><strong>ALaDiT ablations</strong><small>NC, FI, ADV, OneHot, NoDG, NoAlign</small></a>
-        <a href="https://github.com/arielgj95/SICAGE#step-10-train-and-evaluate-the-baselines" target="_blank" rel="noopener"><span>03</span><strong>Baselines</strong><small>MDM and every DSG+ variant</small></a>
-        <a href="https://github.com/arielgj95/SICAGE#step-12-create-run-and-analyze-the-user-study" target="_blank" rel="noopener"><span>04</span><strong>User study</strong><small>Prepare, serve, and analyze ratings</small></a>
-      </div>
-    </section>
+        <div class="repro-grid">
+          <a href="https://github.com/arielgj95/SICAGE#result-to-run-map" target="_blank" rel="noopener"
+            ><span>01</span><strong>Result map</strong><small>Expected values and run directories</small></a
+          >
+          <a href="https://github.com/arielgj95/SICAGE#step-8-train-sicage-and-all-aladit-ablations" target="_blank" rel="noopener"
+            ><span>02</span><strong>ALaDiT ablations</strong><small>NC, FI, ADV, OneHot, NoDG, NoAlign</small></a
+          >
+          <a href="https://github.com/arielgj95/SICAGE#step-10-train-and-evaluate-the-baselines" target="_blank" rel="noopener"
+            ><span>03</span><strong>Baselines</strong><small>MDM and every DSG+ variant</small></a
+          >
+          <a href="https://github.com/arielgj95/SICAGE#step-12-create-run-and-analyze-the-user-study" target="_blank" rel="noopener"
+            ><span>04</span><strong>User study</strong><small>Prepare, serve, and analyze ratings</small></a
+          >
+        </div>
+      </section>
 
-    <section class="section citation-section" id="citation">
-      <div>
-        <div class="section-label">Citation</div>
-        <h2>BibTeX</h2>
-        <p>Temporary anonymous citation while the manuscript is under review.</p>
-      </div>
-      <pre><code>@misc{anonymous2026sicage,
-  title  = {SICAGE: Speaker-Independent Culture-Aware
-            Gesture Generation using TED4C-L Dataset},
-  author = {Anonymous},
-  note   = {ECCV 2026 submission 8226},
-  year   = {2026}
+      <section class="section citation-section" id="citation">
+        <div>
+          <div class="section-label">Citation</div>
+          <h2>BibTeX</h2>
+          <p>Accepted at ECCV 2026.</p>
+        </div>
+        <pre><code>@inproceedings{gjaci2026sicage,
+  author    = {Gjaci, Ariel and Sgorbissa, Antonio and Murino, Vittorio},
+  title     = {SICAGE: Speaker-Independent Culture-Aware
+               Gesture Generation using TED4C-L Dataset},
+  booktitle = {European Conference on Computer Vision (ECCV)},
+  year      = {2026}
 }</code></pre>
-    </section>
-  </main>
+      </section>
+    </main>
 
-  <footer>
-    <div><strong>SICAGE</strong><span>Speaker-independent culture-aware gesture generation.</span></div>
-    <p>Page format adapted from the <a href="https://github.com/paper-website/paper-website.github.io" target="_blank" rel="noopener">paper-website template</a>. © <span id="year">2026</span>.</p>
-  </footer>
+    <footer>
+      <div><strong>SICAGE</strong><span>Speaker-independent culture-aware gesture generation.</span></div>
+      <p>
+        Page format adapted from the
+        <a href="https://github.com/paper-website/paper-website.github.io" target="_blank" rel="noopener">paper-website template</a>. ©
+        <span id="year">2026</span>.
+      </p>
+    </footer>
 
-  <div class="toast" role="status" aria-live="polite" aria-hidden="true"></div>
-</body>
+    <div class="toast" role="status" aria-live="polite" aria-hidden="true"></div>
+  </body>
 </html>

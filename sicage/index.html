@@ -5,17 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="SICAGE learns speaker-independent cultural representations for culture-aware co-speech gesture generation on TED4C-L."
+      content="SICAGE learns speaker-independent cultural representations for culture-aware co-speech gesture generation using TED4C-L."
     />
     <meta name="author" content="Ariel Gjaci, Antonio Sgorbissa, Vittorio Murino" />
     <meta name="keywords" content="SICAGE, co-speech gesture generation, culture-aware AI, diffusion, TED4C-L, ECCV 2026" />
-    <meta property="og:title" content="SICAGE - Speaker-Independent Culture-Aware Gesture Generation" />
+    <meta property="og:title" content="SICAGE: Speaker-Independent Culture-Aware Gesture Generation using TED4C-L Dataset" />
     <meta property="og:description" content="A modular framework and 106-hour dataset for speaker-independent, culture-aware gesture generation." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://arielgj95.github.io/sicage/" />
     <meta property="og:image" content="https://arielgj95.github.io/sicage/static/images/sicage-pipeline.png" />
     <meta name="theme-color" content="#081a2c" />
-    <title>SICAGE | Culture-Aware Gesture Generation</title>
+    <title>SICAGE: Speaker-Independent Culture-Aware Gesture Generation using TED4C-L Dataset</title>
     <link rel="icon" href="../assets/img/favicon.ico" sizes="any" />
     <script>
       document.documentElement.classList.add("js");
@@ -51,9 +51,10 @@
         <div class="hero-glow hero-glow-two" aria-hidden="true"></div>
         <div class="hero-copy reveal">
           <p class="eyebrow">Accepted at ECCV 2026</p>
-          <h1>Speaker-independent<br /><span>culture-aware</span> gestures.</h1>
+          <h1>SICAGE: Speaker-Independent Culture-Aware Gesture Generation using <span>TED4C-L</span> Dataset</h1>
           <p class="hero-summary">
-            SICAGE learns cultural cues that carry across speakers and uses them to generate co-speech gestures from audio and text.
+            SICAGE learns culture-related cues from speech and transcripts without relying on a speaker’s personal style, then uses them to generate
+            synchronized co-speech gestures.
           </p>
           <p class="review-note">Ariel Gjaci · Antonio Sgorbissa · Vittorio Murino</p>
           <div class="link-row" aria-label="Project links">
@@ -74,27 +75,31 @@
           </div>
         </div>
 
-        <div class="hero-facts reveal" aria-label="TED4C-L dataset statistics">
-          <div><strong>106.45</strong><span>hours</span></div>
-          <div><strong>764</strong><span>speakers</span></div>
-          <div><strong>4</strong><span>cultural groups</span></div>
-          <div><strong>659k</strong><span>data samples</span></div>
+        <div class="hero-facts-wrap reveal">
+          <p class="hero-facts-heading">TED4C-L dataset at a glance</p>
+          <div class="hero-facts" aria-label="TED4C-L dataset statistics">
+            <div><strong>106.45</strong><span>hours</span></div>
+            <div><strong>764</strong><span>speakers</span></div>
+            <div><strong>4</strong><span>cultural groups</span></div>
+            <div><strong>659k</strong><span>five-second samples</span></div>
+          </div>
         </div>
       </section>
 
       <section class="section intro-section" id="abstract">
         <div class="section-label">01 · Motivation</div>
         <div class="intro-grid">
-          <h2>Learning what a group shares, not who is speaking.</h2>
+          <h2>Learning group-level patterns without memorizing speakers.</h2>
           <div class="prose">
             <p>
-              People from the same culture do not gesture in exactly the same way. When the same speakers appear in training and test data, a model
-              can seem culture-aware simply because it recognizes their individual style.
+              Culture is not a fixed template, and country or language labels are only practical group annotations. For gesture generation, this makes
+              speaker-disjoint evaluation essential: otherwise a model can look culture-aware while it is mostly recognizing people it has already
+              seen.
             </p>
             <p>
-              SICAGE prevents that shortcut by keeping speakers disjoint across splits and treating each speaker as a domain. Fishr or adversarial
-              training learns culture-relevant cues from audio and text that transfer to unseen speakers. ALaDiT then uses those cues, together with
-              the speech context and a short motion seed, to generate synchronized upper-body gestures.
+              SICAGE treats each speaker as a separate domain and learns cultural representations that remain useful for unseen speakers from the same
+              group. ALaDiT then combines those representations with speech context and a short motion seed to synthesize synchronized upper-body
+              gestures.
             </p>
           </div>
         </div>
@@ -149,7 +154,7 @@
         <div class="section-heading light-heading">
           <div>
             <div class="section-label">03 · Results</div>
-            <h2>Fishr gives the strongest balance.</h2>
+            <h2>The ALaDiT model with Fishr cultural embeddings gives the strongest results.</h2>
           </div>
           <p>Mean ± standard deviation over 10 matched speaker-disjoint test runs. Lower FGD is better; all other metrics are higher-is-better.</p>
         </div>
@@ -191,7 +196,7 @@
                 <td>109.50 ± .68</td>
                 <td>43.41 ± 1.10</td>
                 <td>22.51 ± .15</td>
-                <td>67.72 ± .23</td>
+                <td>0.6772 ± .0023</td>
               </tr>
               <tr class="best-row">
                 <td><span class="result-badge">best balance</span> ALaDiT / FI</td>
@@ -199,7 +204,7 @@
                 <td>110.27 ± .70</td>
                 <td><strong>44.61 ± .95</strong></td>
                 <td><strong>22.63 ± .22</strong></td>
-                <td><strong>68.09 ± .25</strong></td>
+                <td><strong>0.6809 ± .0025</strong></td>
               </tr>
               <tr>
                 <td>ALaDiT / ADV</td>
@@ -207,7 +212,7 @@
                 <td><strong>111.75 ± .71</strong></td>
                 <td>42.71 ± .95</td>
                 <td>22.45 ± .17</td>
-                <td>67.57 ± .27</td>
+                <td>0.6757 ± .0027</td>
               </tr>
             </tbody>
           </table>
@@ -219,9 +224,9 @@
             <h3>Several controls helped us pin down the improvement.</h3>
           </div>
           <p>
-            Giving ALaDiT only a culture label does not reproduce the Fishr result: FGD is 1.63 with OneHot and 1.03 with FI. The same model reaches
-            1.56 when its audio/text encoder is trained without speaker regularization. Alignment matters too—removing it raises FGD to 1.36—but it
-            does not explain the whole improvement. Adding alignment to DSG+ lowers FGD from 4.89 to 2.52, still above ALaDiT/FI.
+            The control runs point to the same conclusion. ALaDiT/FI is not just benefiting from a culture label: OneHot gives 1.63 FGD, while Fishr
+            gives 1.03. Removing speaker-domain regularization from the encoder gives 1.56, and removing ALaDiT alignment losses gives 1.36. Adding
+            similar alignment losses to DSG+ helps substantially, moving FGD from 4.89 to 2.52, but it still does not reach ALaDiT/FI.
           </p>
         </div>
       </section>

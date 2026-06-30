@@ -53,8 +53,9 @@
           <p class="eyebrow">Accepted at ECCV 2026</p>
           <h1>SICAGE: Speaker-Independent Culture-Aware Gesture Generation using <span>TED4C-L</span> Dataset</h1>
           <p class="hero-summary">
-            SICAGE learns culture-related cues from speech and transcripts without relying on a speaker’s personal style, then uses them to generate
-            synchronized co-speech gestures.
+            SICAGE learns cultural representations from behavioral features, such as speech and text, while reducing dependence on each speaker's
+            individual style. These representations generalize to unseen speakers from the same cultural group and condition culture-aware co-speech
+            gesture generation.
           </p>
           <p class="review-note">Ariel Gjaci · Antonio Sgorbissa · Vittorio Murino</p>
           <div class="link-row" aria-label="Project links">
@@ -82,7 +83,7 @@
             <div><strong>106.45</strong><span>hours</span></div>
             <div><strong>764</strong><span>speakers</span></div>
             <div><strong>4</strong><span>cultural groups</span></div>
-            <div><strong>659k</strong><span>five-second samples</span></div>
+            <div><strong>659k</strong><span>samples</span></div>
           </div>
         </div>
       </section>
@@ -90,17 +91,17 @@
       <section class="section intro-section" id="abstract">
         <div class="section-label">01 · Motivation</div>
         <div class="intro-grid">
-          <h2>Learning group-level patterns without memorizing speakers.</h2>
+          <h2>Learning cultural patterns in a speaker-independent way.</h2>
           <div class="prose">
             <p>
-              Culture is not a fixed template, and country or language labels are only practical group annotations. For gesture generation, this makes
-              speaker-disjoint evaluation essential: otherwise a model can look culture-aware while it is mostly recognizing people it has already
-              seen.
+              Culture is shaped by shared social practices and individual behavior. When a model learns cultural representations from the behavior of
+              one group of speakers, those representations should still work for unseen speakers from the same group. Speaker-independent evaluation is
+              therefore essential: otherwise, apparently culture-aware behavior can simply reflect patterns tied to the speakers used during training.
             </p>
             <p>
-              SICAGE treats each speaker as a separate domain and learns cultural representations that remain useful for unseen speakers from the same
-              group. ALaDiT then combines those representations with speech context and a short motion seed to synthesize synchronized upper-body
-              gestures.
+              SICAGE treats each speaker as a separate domain and learns cultural representations designed to generalize to unseen speakers from the
+              same group. ALaDiT then combines those representations with speech, textual context, and a short motion seed to synthesize synchronized
+              upper-body gestures.
             </p>
           </div>
         </div>
@@ -112,7 +113,7 @@
             <div class="section-label">02 · Method</div>
             <h2>One modular pipeline.</h2>
           </div>
-          <p>The dataset pipeline, culture encoder, and motion generator can each be replaced or studied separately.</p>
+          <p>The dataset, cultural encoder, and motion generation model are modular, so each component can be replaced or studied independently.</p>
         </div>
 
         <figure class="pipeline-card reveal">
@@ -129,24 +130,28 @@
           </figcaption>
         </figure>
 
+        <p class="implementation-label">Our implementation</p>
         <div class="method-grid">
           <article class="method-card reveal">
             <span class="method-number">1</span>
             <h3>Build TED4C-L</h3>
-            <p>Each five-second sample pairs 3D upper-body motion with audio, prosody, text embeddings, culture, and speaker identity.</p>
+            <p>TED4C-L contains 659k five-second samples with matched upper-body motion, audio features, text features, culture labels, and speaker identities.</p>
           </article>
           <article class="method-card reveal">
             <span class="method-number">2</span>
-            <h3>Generalize across speakers</h3>
+            <h3>Learn cultural representations</h3>
             <p>
-              Fishr or adversarial training keeps the audio/text representation useful for culture prediction while reducing speaker-specific
-              shortcuts.
+              Fishr or adversarial learning uses speech and text features to build cultural representations that improve generalization to unseen
+              speakers.
             </p>
           </article>
           <article class="method-card reveal">
             <span class="method-number">3</span>
-            <h3>Generate with ALaDiT</h3>
-            <p>A 50-step diffusion model aligns motion with low-level audio and high-level text/culture context in under 14 ms.</p>
+            <h3>Generate motion with ALaDiT</h3>
+            <p>
+              A 50-step motion diffusion model aligns motion with low-level audio and high-level text and cultural contexts to generate four seconds of
+              motion in less than 14 ms.
+            </p>
           </article>
         </div>
       </section>
@@ -157,7 +162,7 @@
             <div class="section-label">03 · Results</div>
             <h2>The ALaDiT model with Fishr cultural embeddings gives the strongest results.</h2>
           </div>
-          <p>Mean ± standard deviation over 10 matched speaker-disjoint test runs. Lower FGD is better; all other metrics are higher-is-better.</p>
+          <p>Mean ± standard deviation over 10 speaker-disjoint test runs. Lower FGD is better. For all other metrics, higher is better.</p>
         </div>
 
         <div class="result-callouts">
@@ -184,36 +189,60 @@
               <tr>
                 <th>Model</th>
                 <th>FGD ↓</th>
-                <th>Diversity ↑</th>
                 <th>CE F1 ↑</th>
                 <th>BAS ↑</th>
                 <th>SRGR ↑</th>
+                <th>Diversity ↑</th>
               </tr>
             </thead>
             <tbody>
               <tr>
+                <td>ALaDiT / OneHot</td>
+                <td>1.63 ± .23</td>
+                <td>43.73 ± 1.13</td>
+                <td>22.51 ± .17</td>
+                <td>67.63 ± .25</td>
+                <td>111.79 ± .58</td>
+              </tr>
+              <tr>
+                <td>ALaDiT / NoDG</td>
+                <td>1.56 ± .22</td>
+                <td>43.18 ± 1.20</td>
+                <td>22.51 ± .23</td>
+                <td>67.76 ± .23</td>
+                <td>111.60 ± .71</td>
+              </tr>
+              <tr>
+                <td>ALaDiT / NoAlign</td>
+                <td>1.36 ± .16</td>
+                <td>43.37 ± .91</td>
+                <td>22.58 ± .17</td>
+                <td><strong>68.17 ± .23</strong></td>
+                <td>111.10 ± .77</td>
+              </tr>
+              <tr>
                 <td>ALaDiT / NC</td>
                 <td>1.60 ± .18</td>
-                <td>109.50 ± .68</td>
                 <td>43.41 ± 1.10</td>
                 <td>22.51 ± .15</td>
-                <td>0.6772 ± .0023</td>
-              </tr>
-              <tr class="best-row">
-                <td><span class="result-badge">best balance</span> ALaDiT / FI</td>
-                <td><strong>1.03 ± .15</strong></td>
-                <td>110.27 ± .70</td>
-                <td><strong>44.61 ± .95</strong></td>
-                <td><strong>22.63 ± .22</strong></td>
-                <td><strong>0.6809 ± .0025</strong></td>
+                <td>67.72 ± .23</td>
+                <td>109.50 ± .68</td>
               </tr>
               <tr>
                 <td>ALaDiT / ADV</td>
                 <td>1.53 ± .17</td>
-                <td><strong>111.75 ± .71</strong></td>
                 <td>42.71 ± .95</td>
                 <td>22.45 ± .17</td>
-                <td>0.6757 ± .0027</td>
+                <td>67.57 ± .27</td>
+                <td><strong>111.75 ± .71</strong></td>
+              </tr>
+              <tr class="best-row">
+                <td><span class="result-badge">best overall</span> ALaDiT / FI</td>
+                <td><strong>1.03 ± .15</strong></td>
+                <td><strong>44.61 ± .95</strong></td>
+                <td><strong>22.63 ± .22</strong></td>
+                <td>68.09 ± .25</td>
+                <td>110.27 ± .70</td>
               </tr>
             </tbody>
           </table>
@@ -221,13 +250,15 @@
 
         <div class="ablation-panel reveal">
           <div>
-            <p class="eyebrow">What the controls show</p>
-            <h3>Several controls helped us pin down the improvement.</h3>
+            <p class="eyebrow">Ablation evidence</p>
+            <h3>Several ablations further demonstrate the value of SICAGE.</h3>
           </div>
           <p>
-            The control runs point to the same conclusion. ALaDiT/FI is not just benefiting from a culture label: OneHot gives 1.63 FGD, while Fishr
-            gives 1.03. Removing speaker-domain regularization from the encoder gives 1.56, and removing ALaDiT alignment losses gives 1.36. Adding
-            similar alignment losses to DSG+ helps substantially, moving FGD from 4.89 to 2.52, but it still does not reach ALaDiT/FI.
+            The ablations show that Fishr-based cultural representations matter beyond simply adding a culture label. Replacing Fishr with one-hot
+            culture labels worsens FGD from 1.03 to 1.63, and using the same speech/text encoder without domain generalization gives 1.56. Removing
+            ALaDiT's alignment losses also reduces quality, with FGD increasing to 1.36 and CE F1 dropping below FI. The user study further supports
+            this trend: among generated models, ALaDiT/FI receives the highest overall ratings and is preferred over ADV overall and over NC for
+            Cultural Match.
           </p>
         </div>
       </section>
@@ -293,9 +324,12 @@
         <div class="section-heading">
           <div>
             <div class="section-label">06 · Reproducibility</div>
-            <h2>Every reported row has a recipe.</h2>
+            <h2>We provide the code for full reproducibility.</h2>
           </div>
-          <p>The README covers the full data pipeline, the main models, and the OneHot, NoDG, NoAlign, and DSG+/FI+Align controls.</p>
+          <p>
+            The repository covers dataset creation or download, all ALaDiT variants and baseline ablations, and the code to prepare, run, and analyze
+            the user study.
+          </p>
         </div>
         <div class="repro-grid">
           <a href="https://github.com/arielgj95/SICAGE#result-to-run-map" target="_blank" rel="noopener"

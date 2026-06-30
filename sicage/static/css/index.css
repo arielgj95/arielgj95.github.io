@@ -132,11 +132,13 @@ a {
 .hero::after {
   content: "";
   position: absolute;
+  z-index: 1;
   inset: auto -5% -140px;
   height: 220px;
   background: var(--paper);
   transform: rotate(-3.5deg);
   transform-origin: center;
+  pointer-events: none;
 }
 
 .hero-glow {
@@ -176,9 +178,12 @@ a {
 .hero-copy,
 .hero-facts-wrap {
   position: relative;
-  z-index: 2;
   width: min(1180px, 100%);
   margin: 0 auto;
+}
+
+.hero-copy {
+  z-index: 2;
 }
 
 .eyebrow,
@@ -279,8 +284,15 @@ a {
 }
 
 .hero-facts-wrap {
+  z-index: 3;
   max-width: 760px;
   margin-top: 48px;
+  padding: 18px 22px 22px;
+  background: rgba(8, 26, 44, 0.62);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 18px;
+  box-shadow: 0 22px 60px rgba(0, 0, 0, 0.18);
+  backdrop-filter: blur(8px);
 }
 
 .hero-facts-heading {
@@ -315,7 +327,7 @@ a {
 }
 
 .hero-facts span {
-  color: rgba(255, 255, 255, 0.48);
+  color: rgba(255, 255, 255, 0.76);
   font-size: 12px;
   letter-spacing: 0.05em;
   text-transform: uppercase;
@@ -399,11 +411,21 @@ a {
   text-align: center;
 }
 
+.implementation-label {
+  width: min(1180px, 100%);
+  margin: 34px auto 0;
+  color: #147c6e;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
 .method-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 18px;
-  margin-top: 24px;
+  margin-top: 14px;
 }
 
 .method-card {
@@ -508,7 +530,7 @@ a {
 
 table {
   width: 100%;
-  min-width: 800px;
+  min-width: 900px;
   border-collapse: collapse;
   font-size: 14px;
 }

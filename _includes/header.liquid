@@ -56,6 +56,16 @@
             </a>
           </li>
 
+          <!-- SICAGE project page -->
+          <li class="nav-item {% if page.url contains '/sicage/' %}active{% endif %}">
+            <a class="nav-link" href="{{ '/sicage/' | relative_url }}">
+              SICAGE
+              {% if page.url contains '/sicage/' %}
+                <span class="sr-only">(current)</span>
+              {% endif %}
+            </a>
+          </li>
+
           <!-- Other pages -->
           {% assign sorted_pages = site.pages | sort: 'nav_order' %}
           {% for p in sorted_pages %}

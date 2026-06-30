@@ -13,7 +13,7 @@ profile:
     <p>ariel.gjaci@iit.it</p>
     <p>Genova, Italy, 16133</p>
 
-selected_papers: false # includes a list of papers marked as "selected={true}"
+selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 
 announcements:
@@ -32,7 +32,7 @@ I earned a Bachelor's degree in **Biomedical Engineering** in 2018, a Master's d
 During my Ph.D., I focused on **culture-aware gesture generation for social robots**, applying a range of deep generative and classical machine learning models.
 My main contributions include:
 
-- Developing **TED4C-L**, a large-scale multimodal dataset of synchronized audio, text, and gesture data from 737 speakers across four cultures.
+- Developing **TED4C-L**, a large-scale multimodal dataset of synchronized audio, text, and gesture data from 764 speakers across four cultures.
 - Analyzing cultural patterns in multiple datasets using machine learning techniques such as **SVMs**, **Random Forests**, **MLPs**, **VQ-VAEs**, and **Transformers**.
 - Designing a culture embedding framework that disentangles cultural identity from speaker identity through **domain generalization** techniques like **Fishr** and **Adversarial Learning**.
 - Building a multimodal **Diffusion-Transformer** model to generate co-speech gestures conditioned on speech, text, and cultural context.

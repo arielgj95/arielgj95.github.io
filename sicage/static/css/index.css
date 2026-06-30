@@ -122,22 +122,23 @@ a {
 .hero {
   position: relative;
   min-height: 790px;
-  padding: 176px max(24px, calc((100vw - 1180px) / 2)) 76px;
+  padding: 176px max(24px, calc((100vw - 1180px) / 2)) 104px;
   overflow: hidden;
   color: var(--white);
   background: radial-gradient(circle at 84% 24%, rgba(47, 174, 155, 0.19), transparent 30%),
     linear-gradient(135deg, #061725 0%, #0a2035 55%, #0d2c42 100%);
+  border-bottom: 1px solid rgba(8, 26, 44, 0.14);
 }
 
 .hero::after {
   content: "";
   position: absolute;
   z-index: 1;
-  inset: auto -5% -140px;
-  height: 220px;
-  background: var(--paper);
-  transform: rotate(-3.5deg);
-  transform-origin: center;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.16);
   pointer-events: none;
 }
 

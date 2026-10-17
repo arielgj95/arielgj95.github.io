@@ -28,8 +28,8 @@ latest_posts:
 ---
 
 I am a Postdoctoral Researcher at [IIT](https://www.iit.it/en-US/home) with a multidisciplinary background spanning biomedical engineering, robotics, and artificial intelligence.
-I earned a Bachelor's degree in **Biomedical Engineering** in 2018, a Master's degree in **Robotics Engineering** in 2022, and a Ph.D. in **Artificial Intelligence and Robotics** in 2025.
-During my Ph.D., I focused on **culture-aware gesture generation for social robots**, applying a range of deep generative and classical machine learning models.
+I earned a Bachelor's degree in **Biomedical Engineering** in 2018, a Master's degree in **Robotics Engineering** in 2021, and a Ph.D. in **Artificial Intelligence and Robotics** in 2025.
+During my Ph.D., I focused on **culture-aware gesture generation for social robots**, applying deep generative and classical machine learning models. This work led to [**SICAGE**, published at **ECCV 2026**](/sicage/).
 My main contributions include:
 
 - Developing **TED4C-L**, a large-scale multimodal dataset of synchronized audio, text, and gesture data from 764 speakers across four cultures.
@@ -38,6 +38,6 @@ My main contributions include:
 - Building a multimodal **Diffusion-Transformer** model to generate co-speech gestures conditioned on speech, text, and cultural context.
 - Developing **rule-based** algorithms using **Semantic Similarity** to identify gestures.
 
-Currently, I contribute to the [XTREME European Project](https://xtremeitu.dk/), working on realistic spatial audio rendering for virtual and augmented reality environments using multimodal learning techniques that combine audio and visual cues.
+Currently, I contribute to the [XTREME European Project](https://xtremeitu.dk/) at IIT, working on **spatial audio rendering** for immersive environments. My ongoing **FACT-RIR** research studies **few-shot room impulse response generation** from sparse acoustic observations, source/receiver geometry, and visual evidence. I am developing models based on **neural audio codecs** and **conditional flow matching**, investigating room-level and query-dependent representations, and building reproducible training and evaluation pipelines on HPC infrastructure. I also work on 3D beamforming-based sound-source localization and a survey of learning-based spatial audio rendering.
 
 My research is **task-oriented** rather than **topic-constrained**. I enjoy tackling complex challenges across domains, from building autonomous agents and realistic virtual environments to exploring future applications in medicine, such as drug discovery and diagnostics.

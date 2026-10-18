@@ -19,9 +19,9 @@ from reportlab.platypus import Paragraph
 ROOT = Path(__file__).resolve().parents[1]
 DATA = json.loads((ROOT / 'assets/json/resume.json').read_text())
 FONT_DIR = Path('/usr/share/fonts/truetype/lato')
-for name, file in [('Lato', 'Lato-Regular.ttf'), ('Lato-Bold', 'Lato-Bold.ttf'), ('Lato-Light', 'Lato-Light.ttf')]:
+for name, file in [('Lato', 'Lato-Regular.ttf'), ('Lato-Light', 'Lato-Light.ttf')]:
     pdfmetrics.registerFont(TTFont(name, str(FONT_DIR / file)))
-pdfmetrics.registerFontFamily('Lato', normal='Lato', bold='Lato-Bold', italic='Lato', boldItalic='Lato-Bold')
+pdfmetrics.registerFontFamily('Lato', normal='Lato', italic='Lato')
 INK = colors.HexColor('#30383e')
 MUTED = colors.HexColor('#66737d')
 BLUE = colors.HexColor('#155e80')
@@ -55,7 +55,7 @@ def bullet(text, x, y, width):
 
 
 def role(title, dates, bullets, y):
-    y = paragraph(title, 222, y, 356, size=9.5, leading=12, font='Lato-Bold', after=2)
+    y = paragraph(title, 222, y, 356, size=9.5, leading=12, font='Lato', after=2)
     y = paragraph(dates, 222, y, 356, size=8.5, leading=10, color=MUTED, after=5)
     for text in bullets:
         y = bullet(text, 222, y, 356)
@@ -82,7 +82,7 @@ for title, institution, dates, details in [
  ('Ph.D. Artificial Intelligence<br/>&amp; Robotics', 'University of Genoa', 'Nov 2021 - May 2025 (defended)', 'Research collaboration with<br/>King\'s College London'),
  ('M.Sc. Robotics Engineering', 'University of Genoa', '2018 - 2021 | 103/110', 'Thesis: Culture-Aware Co-Speech Gestures using GANs'),
  ('B.Sc. Biomedical Engineering', 'University of Genoa', '2014 - 2018 | 92/110', 'Thesis: Activity in Hippocampal Neuronal Networks')]:
-    y = paragraph(title, x, y, width, font='Lato-Bold', size=9.4, leading=12, after=2)
+    y = paragraph(title, x, y, width, font='Lato', size=9.4, leading=12, after=2)
     y = paragraph(institution, x, y, width, size=8.8, leading=11, after=2)
     y = paragraph(dates, x, y, width, size=8.2, leading=10.5, color=MUTED, after=3)
     y = paragraph(details, x, y, width, size=8.5, leading=11, after=12)
@@ -92,7 +92,7 @@ for title, text in [
  ('ML Frameworks', 'PyTorch; Scikit-learn; TensorFlow'),
  ('Methods', 'Diffusion transformers; flow matching; neural audio codecs; domain generalization'),
  ('Research Systems', 'Linux; SLURM; multi-GPU training; Git; ROS&nbsp;1')]:
-    y = paragraph(title.upper(), x, y, width, font='Lato-Bold', size=8.5, leading=11, after=2)
+    y = paragraph(title.upper(), x, y, width, font='Lato', size=8.5, leading=11, after=2)
     y = paragraph(text, x, y, width, size=8.6, leading=11, after=9)
 y = section('Languages', x, y, width)
 y = paragraph('Italian (native)<br/>English (fluent)<br/>Albanian (native)', x, y, width, size=8.8, leading=12, after=9)
@@ -101,15 +101,16 @@ y = paragraph('Modern Topics in Machine Learning (MaLGa); Robotics Summer School
 
 right_y = section('Professional Experience', 222, 675, 356)
 right_y = role('ITALIAN INSTITUTE OF TECHNOLOGY | Postdoctoral Researcher', 'Feb 2025 - Present | Genoa, Italy', [
- 'Developing <b>FACT-RIR</b>: few-shot room impulse response generation from sparse acoustics, source/receiver geometry, and visual evidence.',
- 'Designing neural audio codecs and conditional flow-matching models; studying room-level and query-dependent factors and physics-informed conditioning.',
- 'Building reproducible HPC training and evaluation pipelines with SLURM, multi-GPU resources, controlled ablations, and multi-seed comparisons.',
- 'Built 3D sound-source localization on room point clouds using MVDR, DAS, and MaxRE beamforming; curating spatial-audio data and writing a survey.'
+ 'Developing FACT-RIR, a unified pipeline combining neural audio codecs and conditional flow matching for few-shot room impulse response generation from sparse acoustics, geometry, and visual evidence; investigating room-level and query-dependent representations and physics-informed conditioning.',
+ 'Built 3D sound-source localization on room point clouds using MVDR, DAS, and MaxRE beamforming.',
+ 'Curating multimodal spatial-audio data and writing a survey on learning-based spatial audio rendering.'
 ], right_y)
 right_y = role('UNIVERSITY OF GENOA &amp; KCL | PhD Researcher', 'Nov 2021 - May 2025', [
- 'Developed <b>SICAGE (ECCV 2026, main conference)</b> and ALaDiT, a diffusion-transformer model for culture-aware co-speech motion generation.',
- 'Built <b>TED4C-L</b>: 106.45 hours from 764 speakers across four cultural groups, combining motion, audio, and text representations.',
- 'Learned speaker-independent culture embeddings with Fishr and adversarial learning; developed semantic-similarity gesture-labeling algorithms.'
+ 'Developed rule-based and GAN-based culture-aware co-speech gestures for social robots (AIRO; International Journal of Social Robotics).',
+ 'Analyzed cultural cues in multimodal interactions with classical and deep learning models (AIRO; AHRI @ ACII).',
+ 'Developed semantic-similarity algorithms for symbolic and deictic gesture labeling (IEEE RO-MAN 2024).',
+ 'Built TED4C-L: 106.45 hours from 764 speakers across four cultures; learned speaker-independent culture embeddings with Fishr and adversarial learning.',
+ 'Designed ALaDiT, a diffusion-transformer for culture-aware motion generation, as part of SICAGE (ECCV 2026, main conference).'
 ], right_y)
 right_y = role('AKKA TECHNOLOGIES | Software Engineer', 'May 2021 - Oct 2021 | Italy', [
  'Developed Python backend software for aircraft panels and presented a working demo to stakeholders.'
@@ -130,13 +131,13 @@ short_authors = [
  'Gjaci A., Oneto L., Recchiuto C.T., Sgorbissa A.',
  'Gjaci A., Recchiuto C.T., Sgorbissa A.'
 ]
-venues = ['<b>ECCV 2026, main conference</b>, pp. 392-411.', 'AHRI @ ACII Workshop, 2024.', 'IEEE RO-MAN, 2024.', 'Int. Journal of Social Robotics, 2022.', 'AIRO Workshop, 2022.', 'AIRO Workshop, 2021.']
+venues = ['ECCV 2026, main conference, pp. 392-411.', 'AHRI @ ACII Workshop, 2024.', 'IEEE RO-MAN, 2024.', 'Int. Journal of Social Robotics, 2022.', 'AIRO Workshop, 2022.', 'AIRO Workshop, 2021.']
 for pub, authors, venue in zip(DATA['publications'], short_authors, venues):
     text = f'{authors} <link href="{escape(pub["url"])}" color="#30383e">{escape(pub["name"])}</link>. {venue}'
     right_y = paragraph(text, 222, right_y, 356, size=8.1, leading=10.1, after=4)
 
 c.setFont('Lato', 7)
 c.setFillColor(MUTED)
-c.drawRightString(578, 17, 'Updated 17 October 2026')
+c.drawRightString(578, 17, 'Updated 18 October 2026')
 c.save()
 print(f'Created {OUTPUT}; left bottom={y:.1f}pt, right bottom={right_y:.1f}pt')

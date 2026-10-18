@@ -218,3 +218,21 @@ ul.timeline li::before {
      color: var(--global-text-color);
 }
 */
+
+// Keep CV text in regular weight; section hierarchy comes from size and spacing.
+.cv {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  b,
+  strong,
+  .font-weight-bold,
+  .font-weight-medium,
+  .badge,
+  .list-group-category {
+    font-weight: 400 !important;
+  }
+}

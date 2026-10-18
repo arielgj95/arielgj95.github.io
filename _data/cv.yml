@@ -10,7 +10,8 @@
     - name: Bio
       value: Postdoctoral Researcher at the Italian Institute of Technology (IIT), working on multimodal generative learning,
         room acoustics, and spatial audio. My research spans few-shot room impulse response generation, audio-visual scene modeling,
-        human motion generation, and speaker-independent culture modeling. First author of SICAGE, published at ECCV 2026.
+        human motion generation, and speaker-independent culture modeling. My publications span ECCV, IEEE RO-MAN, and the International
+        Journal of Social Robotics.
 - title: Work Experience
   type: time_table
   contents:
@@ -18,25 +19,24 @@
       institution: Italian Institute of Technology (IIT)
       year: 2025-02-17 - Present
       description:
-        - Developing FACT-RIR, an ongoing research project on few-shot room impulse response generation from observed acoustics,
-          source/receiver geometry, and visual evidence.
-        - Designing latent audio models with neural codecs and conditional flow matching; studying room-level and query-dependent
-          representations and physics-informed acoustic conditioning.
-        - Building reproducible training and evaluation pipelines with controlled ablations, room-disjoint validation, and multi-seed
-          comparisons on HPC resources using SLURM and multi-GPU training.
+        - Developing FACT-RIR, a unified pipeline for few-shot room impulse response generation that combines neural audio codecs
+          and conditional flow matching with sparse acoustic observations, source/receiver geometry, and visual evidence; investigating
+          room-level and query-dependent representations and physics-informed conditioning.
         - Built a 3D sound-source localization pipeline mapped onto room point clouds using MVDR, DAS, and MaxRE beamforming.
         - Curating multimodal spatial-audio data and writing a survey on learning-based spatial audio rendering.
     - title: PhD Researcher
       institution: University of Genoa; research collaboration with King's College London
       year: 2021-11 - 2025-05
       description:
-        - "First author of SICAGE: Speaker-Independent Culture-Aware Gesture Generation using TED4C-L Dataset, published in the
-          ECCV 2026 main conference proceedings."
-        - Built TED4C-L, a multimodal dataset with 106.45 hours from 764 speakers across four cultural groups.
-        - Designed ALaDiT, a diffusion-transformer model for culture-aware co-speech motion generation.
-        - Learned speaker-independent culture embeddings with Fishr regularization and adversarial learning; analyzed cultural
-          patterns with MLPs, SVMs, Random Forests, and VQ-VAEs.
-        - Developed semantic-similarity algorithms for symbolic and deictic gesture labeling.
+        - Developed rule-based and GAN-based methods for culture-aware co-speech gesture generation on social robots, with publications
+          at AIRO and in the International Journal of Social Robotics.
+        - Analyzed cultural cues in multimodal interactions using classical and deep learning models, including MLPs, SVMs, Random
+          Forests, and VQ-VAEs, with publications at AIRO and AHRI at ACII.
+        - Developed semantic-similarity algorithms for symbolic and deictic gesture labeling, published at IEEE RO-MAN 2024.
+        - Built TED4C-L, a multimodal dataset with 106.45 hours from 764 speakers across four cultural groups, and learned speaker-independent
+          culture embeddings with Fishr regularization and adversarial learning.
+        - Designed ALaDiT, a diffusion-transformer model for culture-aware co-speech motion generation, as part of SICAGE, published
+          at ECCV 2026.
     - title: Software Engineer
       institution: AKKA Technologies
       year: 2021-05 - 2021-10
@@ -104,11 +104,11 @@
   type: time_table
   contents:
     - title: "FACT-RIR: Few-shot Room Impulse Response Generation (ongoing research)"
-      institution: Learning room acoustics from sparse observations, geometry, and visual evidence for spatial audio synthesis.
+      institution: A unified pipeline for few-shot room impulse response generation from sparse acoustics, geometry, and visual
+        evidence.
       description:
-        - Neural audio codecs and conditional flow matching for RIR generation.
-        - Room-level and query-dependent acoustic representations, decay conditioning, and controlled factorization studies.
-        - Reproducible data pipelines, acoustic metrics, matched baselines, and multi-seed evaluation.
+        - Combines neural audio codecs and conditional flow matching in a single latent-space RIR synthesis pipeline.
+        - Investigates room-level and query-dependent acoustic representations, decay conditioning, and physics-informed modeling.
 - title: Teaching and Service
   type: list
   contents:
@@ -141,7 +141,6 @@
         - SLURM
         - Multi-GPU training
         - Git
-        - Reproducible evaluation
     - title: Robotics and Audio
       items:
         - ROS 1

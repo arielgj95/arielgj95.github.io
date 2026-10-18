@@ -39,7 +39,7 @@
       "startDate": "2025-02-17",
       "summary": "Research with the PAVIS team on the European XTREME project, developing learning-based spatial audio and multimodal models for immersive environments.",
       "highlights": [
-        "Developing FACT-RIR, a unified pipeline for few-shot room impulse response generation that combines neural audio codecs and conditional flow matching with sparse acoustic observations, source/receiver geometry, and visual evidence; investigating room-level and query-dependent representations and physics-informed conditioning.",
+        "Developing FACT-RIR, a multimodal conditioning framework for few-shot room impulse response generation, using shared room context, query-specific acoustic evidence, and physical priors to guide generative models.",
         "Built a 3D sound-source localization pipeline mapped onto room point clouds using MVDR, DAS, and MaxRE beamforming.",
         "Curating multimodal spatial-audio data and writing a survey on learning-based spatial audio rendering."
       ],
@@ -164,10 +164,10 @@
   "projects": [
     {
       "name": "FACT-RIR: Few-shot Room Impulse Response Generation (ongoing research)",
-      "summary": "A unified pipeline for few-shot room impulse response generation from sparse acoustics, geometry, and visual evidence.",
+      "summary": "A multimodal conditioning framework for few-shot room impulse response generation from sparse acoustic observations, geometry, and visual features.",
       "highlights": [
-        "Combines neural audio codecs and conditional flow matching in a single latent-space RIR synthesis pipeline.",
-        "Investigates room-level and query-dependent acoustic representations, decay conditioning, and physics-informed modeling."
+        "Learning shared room context and retrieving query-specific acoustic evidence to condition generative models.",
+        "Developing conditioning architectures and training strategies that incorporate physical acoustic priors."
       ]
     }
   ],

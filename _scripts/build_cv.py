@@ -101,7 +101,7 @@ y = paragraph('Modern Topics in Machine Learning (MaLGa); Robotics Summer School
 
 right_y = section('Professional Experience', 222, 675, 356)
 right_y = role('ITALIAN INSTITUTE OF TECHNOLOGY | Postdoctoral Researcher', 'Feb 2025 - Present | Genoa, Italy', [
- 'Developing FACT-RIR, a unified pipeline combining neural audio codecs and conditional flow matching for few-shot room impulse response generation from sparse acoustics, geometry, and visual evidence; investigating room-level and query-dependent representations and physics-informed conditioning.',
+ escape(DATA['work'][0]['highlights'][0]),
  'Built 3D sound-source localization on room point clouds using MVDR, DAS, and MaxRE beamforming.',
  'Curating multimodal spatial-audio data and writing a survey on learning-based spatial audio rendering.'
 ], right_y)

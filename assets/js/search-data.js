@@ -18,7 +18,7 @@ ninja.data = [{
           },
         },{id: "nav-cv",
           title: "CV",
-          description: "Curriculum vitae updated on 18 October 2026",
+          description: "Curriculum vitae updated on 20 October 2026",
           section: "Navigation",
           handler: () => {
             window.location.href = "/cv/";
@@ -98,7 +98,7 @@ ninja.data = [{
         title: 'Google Scholar',
         section: 'Socials',
         handler: () => {
-          window.open("https://scholar.google.com/citations?user=JznlkAAAAJ", "_blank");
+          window.open("https://scholar.google.com/citations?user=m_JznlkAAAAJ", "_blank");
         },
       },{
       id: 'light-theme',

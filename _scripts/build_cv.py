@@ -74,7 +74,7 @@ def footer(number):
 # The PDF text is drawn in visual reading order, with no sidebar or text columns.
 y = PAGE_H - MARGIN
 y = paragraph(escape(DATA['basics']['name']), y, size=27, leading=32, after=5, font='Lato-Bold')
-y = paragraph('Postdoctoral Researcher | Multimodal Generative Models | Diffusion Transformers', y,
+y = paragraph('Postdoctoral Researcher | Multimodal Generative Learning | Audio-Visual Learning | Human Motion', y,
               size=10, leading=14, after=5)
 y = paragraph('<link href="mailto:ariel.gjaci@iit.it">ariel.gjaci@iit.it</link> | +39 348 377 6041 | Genoa, Italy',
               y, size=9.8, leading=13, after=4)

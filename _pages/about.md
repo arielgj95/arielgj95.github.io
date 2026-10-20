@@ -32,10 +32,10 @@ I earned a Bachelor's degree in Biomedical Engineering in 2018, a Master's degre
 During my Ph.D., I focused on culture-aware gesture generation for social robots, applying deep generative and classical machine learning models. My contributions span generative gesture models, cultural analysis, and semantic gesture labeling, with publications in the International Journal of Social Robotics, IEEE RO-MAN, and [ECCV 2026 (SICAGE)](/sicage/).
 My main contributions include:
 
-- Developing TED4C-L, a large-scale multimodal dataset of synchronized audio, text, and gesture data from 764 speakers across four cultures.
-- Analyzing cultural patterns in multiple datasets using machine learning techniques such as SVMs, Random Forests, MLPs, VQ-VAEs, and Transformers.
+- Creating and releasing TED4C-L: 106.45 hours from 764 speakers across four cultural groups, aligning motion extracted with MMPose with audio and text.
+- Analyzing cultural cues in interaction and affective data using classical and deep learning models (AIRO 2022; AHRI at ACII 2024).
 - Designing a culture embedding framework that captures cultural cues while reducing dependence on speaker identity through domain generalization techniques like Fishr and Adversarial Learning.
-- Building a multimodal Diffusion-Transformer model to generate co-speech gestures conditioned on speech, text, and cultural context.
+- Developing ALaDiT, a multimodal diffusion transformer for co-speech gestures conditioned on speech, text, and cultural context. It generates four seconds of motion in under 14 ms on a single RTX 3090.
 - Developing rule-based algorithms using Semantic Similarity to identify gestures.
 
 Currently, I contribute to the [XTREME European Project](https://xtremeitu.dk/) at IIT, working on spatial audio for immersive environments. My ongoing research investigates few-shot room impulse response generation from sparse recordings, source/receiver geometry, and depth images. I use counterfactual decay interventions to learn shared reverberation control alongside query-dependent acoustic memory. Current experiments investigate the degree of separation between these conditioning paths and the reliability of acoustic edits. I also develop Eigenmike 64 processing tools for beamforming, binaural audio, and acoustic visualization on 3D room point clouds.

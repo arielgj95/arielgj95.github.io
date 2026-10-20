@@ -76,7 +76,7 @@ def dates(start, end=None):
 # Shared header; all contacts remain selectable text and clickable links.
 y = PAGE_H - MARGIN
 y = paragraph(escape(DATA['basics']['name']), y, size=26, leading=31, after=4, font='Lato-Bold')
-y = paragraph('Postdoctoral Researcher | Multimodal Generative Models | Diffusion Transformers',
+y = paragraph('Postdoctoral Researcher | Multimodal Generative Learning | Audio-Visual Learning | Human Motion',
               y, size=9.6, leading=13, after=4)
 y = paragraph(f'<link href="mailto:{escape(DATA["basics"]["email"])}">{escape(DATA["basics"]["email"])}</link>'
               f' | {escape(DATA["basics"]["phone"])} | Genoa, Italy', y, size=9.3, leading=12, after=3)
@@ -103,7 +103,7 @@ for index, work in enumerate(DATA['work']):
     if index == 0:
         highlights = highlights[:2] + [highlights[2]]
     elif index == 1:
-        highlights = [highlights[0], highlights[1], highlights[3]]
+        highlights = [highlights[0], highlights[1], highlights[2], highlights[4]]
     for item in highlights:
         y = bullet(item, y)
     y -= 5

@@ -53,10 +53,11 @@
       "endDate": "2025-05",
       "summary": "Research on multimodal human motion generation and domain generalization, including a research collaboration with King's College London.",
       "highlights": [
-        "Designed ALaDiT, a diffusion transformer conditioned on speech, text, and cultural representations for 3D gesture generation (SICAGE, ECCV 2026).",
-        "Built a video-to-3D-motion pipeline and released TED4C-L: 106.45 hours of aligned motion, audio, and text from 764 speakers.",
+        "Designed ALaDiT, a multimodal diffusion transformer generating 4 s of 3D motion in <14 ms on a single RTX 3090 (SICAGE, ECCV 2026).",
+        "Created and released TED4C-L: 106.45 hours from 764 speakers, aligning MMPose-extracted motion with audio and text.",
+        "Analyzed cultural cues in interaction and affective data using classical and deep learning models (AIRO 2022; AHRI at ACII 2024).",
         "Learned cultural representations with Fishr and adversarial domain generalization, using speaker-disjoint training and evaluation.",
-        "Evaluated motion quality, diversity, and speech alignment through baseline comparisons and controlled ablations; released training and evaluation code.",
+        "Benchmarked generative models with controlled ablations; released training and evaluation code.",
         "Developed semantic-similarity algorithms for symbolic and deictic gesture labeling (IEEE RO-MAN 2024)."
       ],
       "location": "Genoa, Italy / London, UK"

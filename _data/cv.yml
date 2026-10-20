@@ -10,7 +10,7 @@
     - name: Bio
       value: Postdoctoral researcher in artificial intelligence and robotics, with a background in biomedical engineering.
         Research spans multimodal learning, generative models, human motion, and spatial audio, from dataset creation and
-        model design to distributed training and evaluation.
+        model design to training and evaluation.
 - title: Professional Experience
   type: time_table
   contents:
@@ -19,9 +19,8 @@
       year: 2025-02-17 - Present
       description:
         - Multimodal learning and spatial audio for immersive environments in the European XTREME project.
-        - Developing few-shot room impulse response generation from sparse recordings, source/receiver geometry, and
-          depth images, using counterfactual decay interventions to learn shared reverberation control alongside
-          query-dependent acoustic memory (ongoing research).
+        - Developing few-shot room impulse response generation with counterfactual training for reverberation control
+          (ongoing research).
         - Built Eigenmike 64 processing tools for MVDR, DAS, and MaxRE beamforming, binaural audio, and acoustic energy
           mapping on 3D room point clouds.
         - Implemented audio/video synchronization and 360-degree acoustic overlays for spatial-audio recordings.
@@ -77,7 +76,8 @@
         - SLURM
     - title: Model Training
       items:
-        - Distributed multi-GPU training
+        - Single-GPU training
+        - Data parallelism
 - title: Education
   type: time_table
   contents:

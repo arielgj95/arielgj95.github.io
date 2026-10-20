@@ -6,7 +6,7 @@
     "email": "ariel.gjaci@iit.it",
     "phone": "+393483776041",
     "url": "https://arielgjaci.com",
-    "summary": "Postdoctoral researcher in artificial intelligence and robotics, with a background in biomedical engineering. Research spans multimodal learning, generative models, human motion, and spatial audio, from dataset creation and model design to distributed training and evaluation.",
+    "summary": "Postdoctoral researcher in artificial intelligence and robotics, with a background in biomedical engineering. Research spans multimodal learning, generative models, human motion, and spatial audio, from dataset creation and model design to training and evaluation.",
     "location": {
       "address": "Via Evangelista Torricelli",
       "postalCode": "16133",
@@ -39,7 +39,7 @@
       "startDate": "2025-02-17",
       "summary": "Multimodal learning and spatial audio for immersive environments in the European XTREME project.",
       "highlights": [
-        "Developing few-shot room impulse response generation from sparse recordings, source/receiver geometry, and depth images, using counterfactual decay interventions to learn shared reverberation control alongside query-dependent acoustic memory (ongoing research).",
+        "Developing few-shot room impulse response generation with counterfactual training for reverberation control (ongoing research).",
         "Built Eigenmike 64 processing tools for MVDR, DAS, and MaxRE beamforming, binaural audio, and acoustic energy mapping on 3D room point clouds.",
         "Implemented audio/video synchronization and 360-degree acoustic overlays for spatial-audio recordings."
       ],
@@ -93,7 +93,7 @@
     },
     {
       "name": "Model Training",
-      "keywords": ["Distributed multi-GPU training"]
+      "keywords": ["Single-GPU training", "Data parallelism"]
     }
   ],
   "education": [

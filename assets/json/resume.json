@@ -6,7 +6,7 @@
     "email": "ariel.gjaci@iit.it",
     "phone": "+393483776041",
     "url": "https://arielgjaci.com",
-    "summary": "Postdoctoral Researcher at the Italian Institute of Technology (IIT), working on multimodal generative learning, room acoustics, and spatial audio. My research spans few-shot room impulse response generation, audio-visual scene modeling, human motion generation, and speaker-independent culture modeling. My publications span ECCV, IEEE RO-MAN, and the International Journal of Social Robotics.",
+    "summary": "Postdoctoral researcher developing multimodal generative models for spatial audio and human motion. Experience spans model design, dataset creation, reproducible training and evaluation, and social robotics, with research published at ECCV, IEEE RO-MAN, and in the International Journal of Social Robotics.",
     "location": {
       "address": "Via Evangelista Torricelli",
       "postalCode": "16133",
@@ -15,7 +15,7 @@
     },
     "profiles": [
       {
-        "network": "Linkedin",
+        "network": "LinkedIn",
         "username": "Ariel Gjaci",
         "url": "https://www.linkedin.com/in/ariel-gjaci-43326019b/"
       },
@@ -27,7 +27,7 @@
       {
         "network": "Google Scholar",
         "username": "Ariel Gjaci",
-        "url": "https://scholar.google.com/citations?user=JznlkAAAAJ"
+        "url": "https://scholar.google.com/citations?user=m_JznlkAAAAJ&hl=en"
       }
     ]
   },
@@ -37,27 +37,28 @@
       "position": "Postdoctoral Researcher",
       "url": "https://www.iit.it/people-details/-/people/ariel-gjaci",
       "startDate": "2025-02-17",
-      "summary": "Research with the PAVIS team on the European XTREME project, developing learning-based spatial audio and multimodal models for immersive environments.",
+      "summary": "Multimodal learning and spatial audio for immersive environments in the European XTREME project.",
       "highlights": [
-        "Developing FACT-RIR, a multimodal conditioning framework for few-shot room impulse response generation, using shared room context, query-specific acoustic evidence, and physical priors to guide generative models.",
-        "Built a 3D sound-source localization pipeline mapped onto room point clouds using MVDR, DAS, and MaxRE beamforming.",
-        "Curating multimodal spatial-audio data and writing a survey on learning-based spatial audio rendering."
+        "Developing few-shot room impulse response generation from sparse recordings, source/listener positions, and depth images.",
+        "Designing conditioning and counterfactual training to separate shared reverberation from position-dependent acoustic evidence and enable reverberation editing (ongoing research).",
+        "Built Eigenmike 64 processing tools for MVDR, DAS, and MaxRE beamforming, binaural audio, and acoustic energy mapping on 3D room point clouds.",
+        "Implemented audio/video synchronization and 360-degree acoustic overlays for spatial-audio recordings."
       ],
       "location": "Genoa, Italy"
     },
     {
-      "name": "University of Genoa; research collaboration with King's College London",
+      "name": "University of Genoa",
       "position": "PhD Researcher",
       "url": "https://rubrica.unige.it/personale/UUNAXlpg",
       "startDate": "2021-11",
       "endDate": "2025-05",
-      "summary": "Developed culture-aware co-speech gesture generation for social robots, combining multimodal generative models, domain generalization, and semantic gesture labeling.",
+      "summary": "Research on multimodal human motion generation and domain generalization, including a research collaboration with King's College London.",
       "highlights": [
-        "Developed rule-based and GAN-based methods for culture-aware co-speech gesture generation on social robots, with publications at AIRO and in the International Journal of Social Robotics.",
-        "Analyzed cultural cues in multimodal interactions using classical and deep learning models, including MLPs, SVMs, Random Forests, and VQ-VAEs, with publications at AIRO and AHRI at ACII.",
-        "Developed semantic-similarity algorithms for symbolic and deictic gesture labeling, published at IEEE RO-MAN 2024.",
-        "Built TED4C-L, a multimodal dataset with 106.45 hours from 764 speakers across four cultural groups, and learned speaker-independent culture embeddings with Fishr regularization and adversarial learning.",
-        "Designed ALaDiT, a diffusion-transformer model for culture-aware co-speech motion generation, as part of SICAGE, published at ECCV 2026."
+        "Designed ALaDiT, a multimodal diffusion-transformer for co-speech motion generation, within SICAGE (ECCV 2026, main conference).",
+        "Built and released TED4C-L: 106.45 hours of synchronized motion, audio, and text features from 764 speakers across four cultural groups.",
+        "Learned speaker-independent cultural representations with Fishr and adversarial domain generalization, evaluated on speakers excluded from training.",
+        "Developed semantic-similarity algorithms for symbolic and deictic gesture labeling (IEEE RO-MAN 2024).",
+        "Analyzed cultural cues in interaction and affective data using classical and deep learning models (AIRO 2022; AHRI at ACII 2024)."
       ],
       "location": "Genoa, Italy / London, UK"
     },
@@ -66,9 +67,34 @@
       "position": "Software Engineer",
       "startDate": "2021-05",
       "endDate": "2021-10",
-      "summary": "Developed backend software in Python for managing aircraft panels.",
-      "highlights": ["Delivered and presented a working demo to stakeholders."],
+      "highlights": ["Developed Python backend software for aircraft panels and presented a working demo to stakeholders."],
       "location": "Italy"
+    }
+  ],
+  "skills": [
+    {
+      "name": "Research Focus",
+      "keywords": ["3D audio-visual learning", "Human motion generation", "Multimodal generative learning", "Domain generalization"]
+    },
+    {
+      "name": "Programming",
+      "keywords": ["Python", "C/C++", "R", "MATLAB/Simulink", "LaTeX"]
+    },
+    {
+      "name": "ML Frameworks",
+      "keywords": ["PyTorch", "Scikit-learn", "TensorFlow"]
+    },
+    {
+      "name": "Systems",
+      "keywords": ["Linux", "ROS 1", "Windows"]
+    },
+    {
+      "name": "Tools",
+      "keywords": ["Git", "SLURM"]
+    },
+    {
+      "name": "Model Training",
+      "keywords": ["Distributed multi-GPU training"]
     }
   ],
   "education": [
@@ -76,29 +102,23 @@
       "institution": "University of Genoa",
       "location": "Genoa",
       "url": "https://rubrica.unige.it/personale/UUNAXlpg",
-      "area": "Artificial Intelligence and Robotics; culture-aware motion generation",
-      "studyType": "Ph.D. in Artificial Intelligence and Robotics",
+      "area": "Artificial Intelligence and Robotics",
+      "studyType": "Ph.D.",
       "startDate": "2021-11",
-      "endDate": "2025-05"
-    },
-    {
-      "institution": "King's College London",
-      "location": "London",
-      "url": "https://sairlab.github.io/",
-      "area": "Research collaboration on multimodal interactions and culture-aware gesture generation",
-      "studyType": "Visiting Ph.D."
+      "endDate": "2025-05",
+      "courses": ["Research collaboration with King's College London; thesis defended in May 2025."]
     },
     {
       "institution": "University of Genoa",
       "location": "Genoa",
       "url": "https://rubrica.unige.it/personale/UUNAXlpg",
-      "area": "Robotics",
-      "studyType": "Master's Degree in Robotics Engineering",
+      "area": "Robotics Engineering",
+      "studyType": "M.Sc.",
       "startDate": "2018",
       "endDate": "2021",
       "courses": [
-        "Thesis: Culture-Aware Co-Speech Gestures using Generative Adversarial Networks.",
-        "Computer vision, machine learning, control theory, ROS, embedded systems, navigation, and manipulation."
+        "Thesis: Culture-Aware Co-Speech Gestures Using Generative Adversarial Networks.",
+        "Developed speech-driven GAN gesture generation tested on the Pepper robot (AIRO 2021; International Journal of Social Robotics 2022)."
       ],
       "score": "103/110"
     },
@@ -107,13 +127,10 @@
       "location": "Genoa",
       "url": "https://rubrica.unige.it/personale/UUNAXlpg",
       "area": "Biomedical Engineering",
-      "studyType": "Bachelor's Degree in Biomedical Engineering",
+      "studyType": "B.Sc.",
       "startDate": "2014",
       "endDate": "2018",
-      "courses": [
-        "Thesis: Characterization of the Activity Evoked by Stimuli in Hippocampal Neuronal Networks.",
-        "Signal processing, biomedical instrumentation, electronics, biomechanics, physiology, and programming."
-      ],
+      "courses": ["Thesis: Characterization of the Activity Evoked by Stimuli in Hippocampal Neuronal Networks."],
       "score": "92/110"
     }
   ],
@@ -127,21 +144,21 @@
     },
     {
       "name": "Exploring Cultural Cues in Multimodal Interactions",
-      "publisher": "AHRI Workshop at ACII",
+      "publisher": "AHRI Workshop at ACII, pp. 306-313",
       "releaseDate": "2024",
       "summary": "Ariel Gjaci, Viktor Schmuck, Antonio Sgorbissa, Oya Celiktutan",
       "url": "https://ieeexplore.ieee.org/abstract/document/10970285"
     },
     {
       "name": "Labeling Sentences with Symbolic and Deictic Gestures via Semantic Similarity",
-      "publisher": "IEEE RO-MAN, main conference",
+      "publisher": "IEEE RO-MAN, pp. 477-484",
       "releaseDate": "2024",
       "summary": "Ariel Gjaci, Carmine Tommaso Recchiuto, Antonio Sgorbissa",
       "url": "https://ieeexplore.ieee.org/abstract/document/10731402"
     },
     {
       "name": "Towards Culture-Aware Co-Speech Gestures for Social Robots",
-      "publisher": "International Journal of Social Robotics",
+      "publisher": "International Journal of Social Robotics, 14(6), pp. 1493-1506",
       "releaseDate": "2022",
       "summary": "Ariel Gjaci, Carmine Tommaso Recchiuto, Antonio Sgorbissa",
       "url": "https://link.springer.com/article/10.1007/s12369-022-00893-y"
@@ -159,16 +176,6 @@
       "releaseDate": "2021",
       "summary": "Ariel Gjaci, Carmine Tommaso Recchiuto, Antonio Sgorbissa",
       "url": "https://ceur-ws.org/Vol-3162/short5.pdf"
-    }
-  ],
-  "projects": [
-    {
-      "name": "FACT-RIR: Few-shot Room Impulse Response Generation (ongoing research)",
-      "summary": "A multimodal conditioning framework for few-shot room impulse response generation from sparse acoustic observations, geometry, and visual features.",
-      "highlights": [
-        "Learning shared room context and retrieving query-specific acoustic evidence to condition generative models.",
-        "Developing conditioning architectures and training strategies that incorporate physical acoustic priors."
-      ]
     }
   ],
   "volunteer": [
@@ -212,24 +219,6 @@
       "icon": "fa-solid fa-certificate"
     }
   ],
-  "skills": [
-    {
-      "name": "Programming",
-      "keywords": ["Python", "C/C++", "R", "MATLAB/Simulink", "LaTeX"]
-    },
-    {
-      "name": "Machine Learning",
-      "keywords": ["PyTorch", "Scikit-learn", "TensorFlow", "Diffusion transformers", "Flow matching", "Neural audio codecs", "Domain generalization"]
-    },
-    {
-      "name": "Research Infrastructure",
-      "keywords": ["Linux", "SLURM", "Multi-GPU training", "Git"]
-    },
-    {
-      "name": "Robotics and Audio",
-      "keywords": ["ROS 1", "Beamforming", "Spatial audio", "Room impulse responses", "Multimodal learning"]
-    }
-  ],
   "languages": [
     {
       "language": "Italian",
@@ -247,18 +236,7 @@
       "icon": ""
     }
   ],
-  "interests": [
-    {
-      "name": "Multimodal Generative Learning",
-      "keywords": ["Audio-visual scene modeling", "Human motion generation", "Domain generalization"]
-    },
-    {
-      "name": "Computational Acoustics",
-      "keywords": ["Few-shot room acoustics", "Spatial audio rendering", "Physics-informed learning"]
-    },
-    {
-      "name": "Robotics",
-      "keywords": ["Social robots", "Culture-aware interaction", "Co-speech gestures"]
-    }
-  ]
+  "meta": {
+    "lastModified": "2026-10-20"
+  }
 }

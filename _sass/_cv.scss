@@ -219,20 +219,22 @@ ul.timeline li::before {
 }
 */
 
-// Keep CV text in regular weight; section hierarchy comes from size and spacing.
+// Use bold for section and entry titles, with regular-weight body text.
 .cv {
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
+  font-weight: 400;
+
   b,
   strong,
+  .font-weight-light,
   .font-weight-bold,
   .font-weight-medium,
-  .badge,
-  .list-group-category {
+  .badge {
     font-weight: 400 !important;
+  }
+
+  h3.card-title,
+  h6.title,
+  .list-group-category {
+    font-weight: 700 !important;
   }
 }

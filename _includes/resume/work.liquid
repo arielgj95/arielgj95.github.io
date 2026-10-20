@@ -16,7 +16,7 @@
             <tbody>
               <tr>
                 <td>
-                  <span class="badge font-weight-bold danger-color-dark text-uppercase align-middle" style="min-width: 75px"> {{ date }} </span>
+                  <span class="badge font-weight-normal danger-color-dark text-uppercase align-middle" style="min-width: 75px"> {{ date }} </span>
                 </td>
               </tr>
               {% if content.location %}
@@ -35,13 +35,14 @@
         <div class="col-xs-10 cl-sm-10 col-md-10 mt-2 mt-md-0">
           <h6 class="title font-weight-bold ml-1 ml-md-4">
             {% if content.url %}
-              <a href="{{ content.url }}">{{ content.position }}</a>
+              <a href="{{ content.url }}">{{ content.name | upcase }} | {{ content.position }}</a>
             {% else %}
-              {{ content.position }}
+              {{ content.name | upcase }} | {{ content.position }}
             {% endif %}
           </h6>
-          <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem">{{ content.name }}</h6>
-          <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem; font-style: italic">{{ content.summary }}</h6>
+          {% if content.summary %}
+            <p class="ml-1 ml-md-4">{{ content.summary }}</p>
+          {% endif %}
           <ul class="items">
             {% for item in content.highlights %}
               <li>

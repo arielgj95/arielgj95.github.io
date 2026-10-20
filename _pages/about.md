@@ -28,16 +28,16 @@ latest_posts:
 ---
 
 I am a Postdoctoral Researcher at [IIT](https://www.iit.it/en-US/home) with a multidisciplinary background spanning biomedical engineering, robotics, and artificial intelligence.
-I earned a Bachelor's degree in **Biomedical Engineering** in 2018, a Master's degree in **Robotics Engineering** in 2021, and a Ph.D. in **Artificial Intelligence and Robotics** in 2025.
-During my Ph.D., I focused on **culture-aware gesture generation for social robots**, applying deep generative and classical machine learning models. My contributions span generative gesture models, cultural analysis, and semantic gesture labeling, with publications in the International Journal of Social Robotics, IEEE RO-MAN, and [ECCV 2026 (SICAGE)](/sicage/).
+I earned a Bachelor's degree in Biomedical Engineering in 2018, a Master's degree in Robotics Engineering in 2021, and a Ph.D. in Artificial Intelligence and Robotics in 2025.
+During my Ph.D., I focused on culture-aware gesture generation for social robots, applying deep generative and classical machine learning models. My contributions span generative gesture models, cultural analysis, and semantic gesture labeling, with publications in the International Journal of Social Robotics, IEEE RO-MAN, and [ECCV 2026 (SICAGE)](/sicage/).
 My main contributions include:
 
-- Developing **TED4C-L**, a large-scale multimodal dataset of synchronized audio, text, and gesture data from 764 speakers across four cultures.
-- Analyzing cultural patterns in multiple datasets using machine learning techniques such as **SVMs**, **Random Forests**, **MLPs**, **VQ-VAEs**, and **Transformers**.
-- Designing a culture embedding framework that disentangles cultural identity from speaker identity through **domain generalization** techniques like **Fishr** and **Adversarial Learning**.
-- Building a multimodal **Diffusion-Transformer** model to generate co-speech gestures conditioned on speech, text, and cultural context.
-- Developing **rule-based** algorithms using **Semantic Similarity** to identify gestures.
+- Developing TED4C-L, a large-scale multimodal dataset of synchronized audio, text, and gesture data from 764 speakers across four cultures.
+- Analyzing cultural patterns in multiple datasets using machine learning techniques such as SVMs, Random Forests, MLPs, VQ-VAEs, and Transformers.
+- Designing a culture embedding framework that captures cultural cues while reducing dependence on speaker identity through domain generalization techniques like Fishr and Adversarial Learning.
+- Building a multimodal Diffusion-Transformer model to generate co-speech gestures conditioned on speech, text, and cultural context.
+- Developing rule-based algorithms using Semantic Similarity to identify gestures.
 
-Currently, I contribute to the [XTREME European Project](https://xtremeitu.dk/) at IIT, working on **spatial audio rendering** for immersive environments. My ongoing **FACT-RIR** research develops a **multimodal conditioning framework** for **few-shot room impulse response generation**. It learns shared room context and retrieves query-specific acoustic evidence from sparse acoustic observations, source/receiver geometry, and visual features, incorporating physical priors to guide generative models. I also work on 3D beamforming-based sound-source localization and a survey of learning-based spatial audio rendering.
+Currently, I contribute to the [XTREME European Project](https://xtremeitu.dk/) at IIT, working on spatial audio for immersive environments. My ongoing research investigates few-shot room impulse response generation from sparse recordings, source/listener positions, and depth images. I design conditioning and counterfactual training to separate shared reverberation from position-dependent acoustic evidence and enable reverberation editing. I also develop Eigenmike 64 processing tools for beamforming, binaural audio, and acoustic visualization on 3D room point clouds.
 
-My research is **task-oriented** rather than **topic-constrained**. I enjoy tackling complex challenges across domains, from building autonomous agents and realistic virtual environments to exploring future applications in medicine, such as drug discovery and diagnostics.
+My research is task-oriented rather than topic-constrained. I enjoy tackling complex challenges across domains, from building autonomous agents and realistic virtual environments to exploring future applications in medicine, such as drug discovery and diagnostics.

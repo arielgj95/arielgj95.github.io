@@ -8,39 +8,77 @@
     - name: Phone
       value: "+393483776041"
     - name: Bio
-      value: Postdoctoral Researcher at the Italian Institute of Technology (IIT), working on multimodal generative learning,
-        room acoustics, and spatial audio. My research spans few-shot room impulse response generation, audio-visual scene modeling,
-        human motion generation, and speaker-independent culture modeling. My publications span ECCV, IEEE RO-MAN, and the International
-        Journal of Social Robotics.
-- title: Work Experience
+      value: Postdoctoral researcher developing multimodal generative models for spatial audio and human motion. Experience
+        spans model design, dataset creation, reproducible training and evaluation, and social robotics, with research
+        published at ECCV, IEEE RO-MAN, and in the International Journal of Social Robotics.
+- title: Professional Experience
   type: time_table
   contents:
     - title: Postdoctoral Researcher
       institution: Italian Institute of Technology (IIT)
       year: 2025-02-17 - Present
       description:
-        - Developing FACT-RIR, a multimodal conditioning framework for few-shot room impulse response generation, using shared
-          room context, query-specific acoustic evidence, and physical priors to guide generative models.
-        - Built a 3D sound-source localization pipeline mapped onto room point clouds using MVDR, DAS, and MaxRE beamforming.
-        - Curating multimodal spatial-audio data and writing a survey on learning-based spatial audio rendering.
+        - Multimodal learning and spatial audio for immersive environments in the European XTREME project.
+        - Developing few-shot room impulse response generation from sparse recordings, source/listener positions, and
+          depth images.
+        - Designing conditioning and counterfactual training to separate shared reverberation from position-dependent
+          acoustic evidence and enable reverberation editing (ongoing research).
+        - Built Eigenmike 64 processing tools for MVDR, DAS, and MaxRE beamforming, binaural audio, and acoustic energy
+          mapping on 3D room point clouds.
+        - Implemented audio/video synchronization and 360-degree acoustic overlays for spatial-audio recordings.
     - title: PhD Researcher
-      institution: University of Genoa; research collaboration with King's College London
+      institution: University of Genoa
       year: 2021-11 - 2025-05
       description:
-        - Developed rule-based and GAN-based methods for culture-aware co-speech gesture generation on social robots, with publications
-          at AIRO and in the International Journal of Social Robotics.
-        - Analyzed cultural cues in multimodal interactions using classical and deep learning models, including MLPs, SVMs, Random
-          Forests, and VQ-VAEs, with publications at AIRO and AHRI at ACII.
-        - Developed semantic-similarity algorithms for symbolic and deictic gesture labeling, published at IEEE RO-MAN 2024.
-        - Built TED4C-L, a multimodal dataset with 106.45 hours from 764 speakers across four cultural groups, and learned speaker-independent
-          culture embeddings with Fishr regularization and adversarial learning.
-        - Designed ALaDiT, a diffusion-transformer model for culture-aware co-speech motion generation, as part of SICAGE, published
-          at ECCV 2026.
+        - Research on multimodal human motion generation and domain generalization, including a research collaboration
+          with King's College London.
+        - Designed ALaDiT, a multimodal diffusion-transformer for co-speech motion generation, within SICAGE (ECCV 2026,
+          main conference).
+        - "Built and released TED4C-L: 106.45 hours of synchronized motion, audio, and text features from 764 speakers
+          across four cultural groups."
+        - Learned speaker-independent cultural representations with Fishr and adversarial domain generalization, evaluated
+          on speakers excluded from training.
+        - Developed semantic-similarity algorithms for symbolic and deictic gesture labeling (IEEE RO-MAN 2024).
+        - Analyzed cultural cues in interaction and affective data using classical and deep learning models (AIRO 2022;
+          AHRI at ACII 2024).
     - title: Software Engineer
       institution: AKKA Technologies
       year: 2021-05 - 2021-10
       description:
-        - Delivered and presented a working demo to stakeholders.
+        - Developed Python backend software for aircraft panels and presented a working demo to stakeholders.
+- title: Skills
+  type: nested_list
+  contents:
+    - title: Research Focus
+      items:
+        - 3D audio-visual learning
+        - Human motion generation
+        - Multimodal generative learning
+        - Domain generalization
+    - title: Programming
+      items:
+        - Python
+        - C/C++
+        - R
+        - MATLAB/Simulink
+        - LaTeX
+    - title: ML Frameworks
+      items:
+        - PyTorch
+        - Scikit-learn
+        - TensorFlow
+    - title: Systems
+      items:
+        - Linux
+        - ROS 1
+        - Windows
+    - title: Tools
+      items:
+        - Git
+        - SLURM
+    - title: Model Training
+      items:
+        - Distributed multi-GPU training
 - title: Education
   type: time_table
   contents:
@@ -48,24 +86,19 @@
       institution: University of Genoa
       year: 2021-11 - 2025-05
       description:
-        - Artificial Intelligence and Robotics; culture-aware motion generation
-    - title: Visiting Ph.D.
-      institution: King's College London
-      year: ""
-      description:
-        - Research collaboration on multimodal interactions and culture-aware gesture generation
-    - title: Master's Degree in Robotics Engineering
+        - Research collaboration with King's College London; thesis defended in May 2025.
+    - title: M.Sc. in Robotics Engineering
       institution: University of Genoa
       year: 2018 - 2021
       description:
-        - "Thesis: Culture-Aware Co-Speech Gestures using Generative Adversarial Networks."
-        - Computer vision, machine learning, control theory, ROS, embedded systems, navigation, and manipulation.
-    - title: Bachelor's Degree in Biomedical Engineering
+        - "Thesis: Culture-Aware Co-Speech Gestures Using Generative Adversarial Networks."
+        - Developed speech-driven GAN gesture generation tested on the Pepper robot (AIRO 2021; International Journal
+          of Social Robotics 2022).
+    - title: B.Sc. in Biomedical Engineering
       institution: University of Genoa
       year: 2014 - 2018
       description:
         - "Thesis: Characterization of the Activity Evoked by Stimuli in Hippocampal Neuronal Networks."
-        - Signal processing, biomedical instrumentation, electronics, biomechanics, physiology, and programming.
 - title: Publications
   type: time_table
   contents:
@@ -75,17 +108,17 @@
       description:
         - Ariel Gjaci, Antonio Sgorbissa, Vittorio Murino
     - title: Exploring Cultural Cues in Multimodal Interactions
-      institution: AHRI Workshop at ACII
+      institution: AHRI Workshop at ACII, pp. 306-313
       year: "2024"
       description:
         - Ariel Gjaci, Viktor Schmuck, Antonio Sgorbissa, Oya Celiktutan
     - title: Labeling Sentences with Symbolic and Deictic Gestures via Semantic Similarity
-      institution: IEEE RO-MAN, main conference
+      institution: IEEE RO-MAN, pp. 477-484
       year: "2024"
       description:
         - Ariel Gjaci, Carmine Tommaso Recchiuto, Antonio Sgorbissa
     - title: Towards Culture-Aware Co-Speech Gestures for Social Robots
-      institution: International Journal of Social Robotics
+      institution: International Journal of Social Robotics, 14(6), pp. 1493-1506
       year: "2022"
       description:
         - Ariel Gjaci, Carmine Tommaso Recchiuto, Antonio Sgorbissa
@@ -99,15 +132,6 @@
       year: "2021"
       description:
         - Ariel Gjaci, Carmine Tommaso Recchiuto, Antonio Sgorbissa
-- title: Research Projects
-  type: time_table
-  contents:
-    - title: "FACT-RIR: Few-shot Room Impulse Response Generation (ongoing research)"
-      institution: A multimodal conditioning framework for few-shot room impulse response generation from sparse acoustic observations,
-        geometry, and visual features.
-      description:
-        - Learning shared room context and retrieving query-specific acoustic evidence to condition generative models.
-        - Developing conditioning architectures and training strategies that incorporate physical acoustic priors.
 - title: Teaching and Service
   type: list
   contents:
@@ -115,38 +139,21 @@
     - Co-organizer of the ECCV workshop Expressive Encounters.
     - Reviewer for AAAI, ECCV, ACM Multimedia, IROS, ICMI, and the International Journal of Social Robotics.
     - Session chair at IEEE RO-MAN 2024.
-- title: Core Skills
-  type: nested_list
+- title: Training
+  type: time_table
   contents:
-    - title: Programming
-      items:
-        - Python
-        - C/C++
-        - R
-        - MATLAB/Simulink
-        - LaTeX
-    - title: Machine Learning
-      items:
-        - PyTorch
-        - Scikit-learn
-        - TensorFlow
-        - Diffusion transformers
-        - Flow matching
-        - Neural audio codecs
-        - Domain generalization
-    - title: Research Infrastructure
-      items:
-        - Linux
-        - SLURM
-        - Multi-GPU training
-        - Git
-    - title: Robotics and Audio
-      items:
-        - ROS 1
-        - Beamforming
-        - Spatial audio
-        - Room impulse responses
-        - Multimodal learning
+    - title: "Improving Deep Neural Networks: Hyperparameter Tuning, Regularization and Optimization"
+      institution: Coursera
+      year: "2021"
+    - title: Natural Language Processing with Classification and Vector Spaces
+      institution: Coursera
+      year: "2022"
+    - title: Topics in Modern Machine Learning
+      institution: MaLGa - Machine Learning Genoa Center
+      year: "2023"
+    - title: 1st Doctoral Summer School on Robotics and Intelligent Machines
+      institution: Scuola Superiore Sant'Anna
+      year: "2023"
 - title: Languages
   type: map
   contents:

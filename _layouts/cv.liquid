@@ -29,6 +29,7 @@ layout: default
     </header>
 
     <article>
+      {% include cv/downloads.liquid %}
       <div class="cv">
         {% for entry in site.data.cv %}
           <a class="anchor" id="{{ entry.title }}"></a>
@@ -82,6 +83,7 @@ layout: default
     </header>
 
     <article>
+      {% include cv/downloads.liquid %}
       <div class="cv">
         {% for data in site.data.resume %}
           {% if site.jsonresume and site.jsonresume.size > 0 %}

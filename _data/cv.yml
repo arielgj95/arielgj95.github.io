@@ -8,9 +8,9 @@
     - name: Phone
       value: "+393483776041"
     - name: Bio
-      value: Postdoctoral researcher developing multimodal generative models for spatial audio and human motion. Experience
-        spans model design, dataset creation, reproducible training and evaluation, and social robotics, with research
-        published at ECCV, IEEE RO-MAN, and in the International Journal of Social Robotics.
+      value: Postdoctoral researcher in artificial intelligence and robotics, with a background in biomedical engineering.
+        Research spans multimodal learning, generative models, human motion, and spatial audio, from dataset creation and
+        model design to distributed training and evaluation.
 - title: Professional Experience
   type: time_table
   contents:
@@ -19,10 +19,9 @@
       year: 2025-02-17 - Present
       description:
         - Multimodal learning and spatial audio for immersive environments in the European XTREME project.
-        - Developing few-shot room impulse response generation from sparse recordings, source/listener positions, and
-          depth images.
-        - Designing conditioning and counterfactual training to separate shared reverberation from position-dependent
-          acoustic evidence and enable reverberation editing (ongoing research).
+        - Developing few-shot room impulse response generation from sparse recordings, source/receiver geometry, and
+          depth images, using counterfactual decay interventions to learn shared reverberation control alongside
+          query-dependent acoustic memory (ongoing research).
         - Built Eigenmike 64 processing tools for MVDR, DAS, and MaxRE beamforming, binaural audio, and acoustic energy
           mapping on 3D room point clouds.
         - Implemented audio/video synchronization and 360-degree acoustic overlays for spatial-audio recordings.

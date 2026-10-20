@@ -1,0 +1,22 @@
+{% if page.cv_pdf %}
+  <p class="mb-3" aria-label="CV downloads">
+    <a
+      class="btn btn-sm btn-outline-primary mr-2 mb-2"
+      href="{% if page.cv_pdf contains '://' %}{{ page.cv_pdf }}{% else %}{{ page.cv_pdf | prepend: 'assets/pdf/' | relative_url }}{% endif %}"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Download CV (2 pages)
+    </a>
+    {% if page.cv_compact_pdf %}
+      <a
+        class="btn btn-sm btn-outline-primary mb-2"
+        href="{{ page.cv_compact_pdf | prepend: 'assets/pdf/' | relative_url }}"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        One-page overview
+      </a>
+    {% endif %}
+  </p>
+{% endif %}

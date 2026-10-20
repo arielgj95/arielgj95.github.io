@@ -18,7 +18,7 @@ from reportlab.pdfgen import canvas
 from reportlab.platypus import Paragraph
 
 ROOT = Path(__file__).resolve().parents[1]
-DATA = json.loads((ROOT / 'assets/json/resume.json').read_text())
+DATA = json.loads((ROOT / 'assets/json/resume.json').read_text(encoding='utf-8'))
 FONT_DIR = Path(os.environ.get('CV_FONT_DIR', '/usr/share/fonts/truetype/lato'))
 for name, filename in [('Lato', 'Lato-Regular.ttf'), ('Lato-Bold', 'Lato-Bold.ttf')]:
     pdfmetrics.registerFont(TTFont(name, str(FONT_DIR / filename)))
@@ -74,7 +74,7 @@ def footer(number):
 # The PDF text is drawn in visual reading order, with no sidebar or text columns.
 y = PAGE_H - MARGIN
 y = paragraph(escape(DATA['basics']['name']), y, size=27, leading=32, after=5, font='Lato-Bold')
-y = paragraph('Postdoctoral Researcher | Multimodal Generative Learning | Spatial Audio | Human Motion', y,
+y = paragraph('Postdoctoral Researcher | Multimodal Generative Models | Diffusion Transformers', y,
               size=10, leading=14, after=5)
 y = paragraph('<link href="mailto:ariel.gjaci@iit.it">ariel.gjaci@iit.it</link> | +39 348 377 6041 | Genoa, Italy',
               y, size=9.8, leading=13, after=4)
@@ -125,8 +125,8 @@ y = section('Teaching and Service', y)
 for item in DATA['volunteer'][0]['highlights']:
     y = bullet(item, y)
 
-y = section('Training', y)
-y = paragraph("Topics in Modern Machine Learning (MaLGa, 2023); Robotics and Intelligent Machines Summer School (Scuola Superiore Sant'Anna, 2023); Coursera courses in deep learning and NLP (2021-2022).", y,
+y = section('Selected Training', y)
+y = paragraph("Topics in Modern Machine Learning (MaLGa, 2023); Robotics and Intelligent Machines Summer School (Scuola Superiore Sant'Anna, 2023).", y,
               size=9.5, leading=12.5, after=3)
 y = section('Languages', y)
 y = paragraph('; '.join(f'{escape(x["language"])} ({"native" if x["fluency"] == "Native speaker" else x["fluency"].lower()})' for x in DATA['languages']) + '.',

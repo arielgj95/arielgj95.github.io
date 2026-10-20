@@ -8,9 +8,9 @@
     - name: Phone
       value: "+393483776041"
     - name: Bio
-      value: Postdoctoral researcher in artificial intelligence and robotics, with a background in biomedical engineering.
-        Research spans multimodal learning, generative models, human motion, and spatial audio, from dataset creation and
-        model design to training and evaluation.
+      value: Postdoctoral researcher with a PhD in Artificial Intelligence and Robotics. Develops multimodal generative
+        models for human motion and spatial audio, combining diffusion transformers, representation learning, dataset
+        development, and experimental evaluation in Python and PyTorch.
 - title: Professional Experience
   type: time_table
   contents:
@@ -19,10 +19,10 @@
       year: 2025-02-17 - Present
       description:
         - Multimodal learning and spatial audio for immersive environments in the European XTREME project.
-        - Developing few-shot room impulse response generation with counterfactual training for reverberation control
-          (ongoing research).
-        - Built Eigenmike 64 processing tools for MVDR, DAS, and MaxRE beamforming, binaural audio, and acoustic energy
-          mapping on 3D room point clouds.
+        - Developing few-shot room impulse response generation from audio and depth, with counterfactual training for
+          reverberation control (ongoing research).
+        - Built Eigenmike 64 processing pipelines for beamforming, binaural rendering, and acoustic mapping on 3D room
+          point clouds.
         - Implemented audio/video synchronization and 360-degree acoustic overlays for spatial-audio recordings.
     - title: PhD Researcher
       institution: University of Genoa
@@ -30,15 +30,15 @@
       description:
         - Research on multimodal human motion generation and domain generalization, including a research collaboration
           with King's College London.
-        - Designed ALaDiT, a multimodal diffusion-transformer for co-speech motion generation, within SICAGE (ECCV 2026,
-          main conference).
-        - "Built and released TED4C-L: 106.45 hours of synchronized motion, audio, and text features from 764 speakers
-          across four cultural groups."
-        - Learned speaker-independent cultural representations with Fishr and adversarial domain generalization, evaluated
-          on speakers excluded from training.
+        - Designed ALaDiT, a diffusion transformer conditioned on speech, text, and cultural representations for 3D gesture
+          generation (SICAGE, ECCV 2026).
+        - "Built a video-to-3D-motion pipeline and released TED4C-L: 106.45 hours of aligned motion, audio, and text from
+          764 speakers."
+        - Learned cultural representations with Fishr and adversarial domain generalization, using speaker-disjoint training
+          and evaluation.
+        - Evaluated motion quality, diversity, and speech alignment through baseline comparisons and controlled ablations;
+          released training and evaluation code.
         - Developed semantic-similarity algorithms for symbolic and deictic gesture labeling (IEEE RO-MAN 2024).
-        - Analyzed cultural cues in interaction and affective data using classical and deep learning models (AIRO 2022;
-          AHRI at ACII 2024).
     - title: Software Engineer
       institution: AKKA Technologies
       year: 2021-05 - 2021-10
@@ -47,36 +47,31 @@
 - title: Skills
   type: nested_list
   contents:
-    - title: Research Focus
+    - title: Generative Modeling
       items:
-        - 3D audio-visual learning
-        - Human motion generation
-        - Multimodal generative learning
+        - Diffusion transformers
+        - GANs
+        - Multimodal conditioning
+    - title: Learning and Evaluation
+      items:
+        - Representation learning
         - Domain generalization
+        - Generative model evaluation
     - title: Programming
       items:
         - Python
         - C/C++
-        - R
         - MATLAB/Simulink
-        - LaTeX
     - title: ML Frameworks
       items:
         - PyTorch
         - Scikit-learn
         - TensorFlow
-    - title: Systems
-      items:
-        - Linux
-        - ROS 1
-        - Windows
-    - title: Tools
+    - title: Tools and Training
       items:
         - Git
+        - Linux
         - SLURM
-    - title: Model Training
-      items:
-        - Single-GPU training
         - Data parallelism
 - title: Education
   type: time_table
@@ -96,8 +91,6 @@
     - title: B.Sc. in Biomedical Engineering
       institution: University of Genoa
       year: 2014 - 2018
-      description:
-        - "Thesis: Characterization of the Activity Evoked by Stimuli in Hippocampal Neuronal Networks."
 - title: Publications
   type: time_table
   contents:
@@ -141,12 +134,6 @@
 - title: Training
   type: time_table
   contents:
-    - title: "Improving Deep Neural Networks: Hyperparameter Tuning, Regularization and Optimization"
-      institution: Coursera
-      year: "2021"
-    - title: Natural Language Processing with Classification and Vector Spaces
-      institution: Coursera
-      year: "2022"
     - title: Topics in Modern Machine Learning
       institution: MaLGa - Machine Learning Genoa Center
       year: "2023"

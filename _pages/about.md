@@ -40,4 +40,4 @@ My main contributions include:
 
 Currently, I contribute to the [XTREME European Project](https://xtremeitu.dk/) at IIT, working on spatial audio for immersive environments. My ongoing research investigates few-shot room impulse response generation from sparse recordings, source/receiver geometry, and depth images. I use counterfactual decay interventions to learn shared reverberation control alongside query-dependent acoustic memory. Current experiments investigate the degree of separation between these conditioning paths and the reliability of acoustic edits. I also develop Eigenmike 64 processing tools for beamforming, binaural audio, and acoustic visualization on 3D room point clouds.
 
-My research is task-oriented rather than topic-constrained. I enjoy tackling complex challenges across domains, from building autonomous agents and realistic virtual environments to exploring future applications in medicine, such as drug discovery and diagnostics.
+My work connects conditional generation, multimodal representation learning, and evaluation across human motion and spatial audio.

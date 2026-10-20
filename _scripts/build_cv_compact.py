@@ -76,7 +76,7 @@ def dates(start, end=None):
 # Shared header; all contacts remain selectable text and clickable links.
 y = PAGE_H - MARGIN
 y = paragraph(escape(DATA['basics']['name']), y, size=26, leading=31, after=4, font='Lato-Bold')
-y = paragraph('Postdoctoral Researcher | Multimodal Generative Learning | Spatial Audio | Human Motion',
+y = paragraph('Postdoctoral Researcher | Multimodal Generative Models | Diffusion Transformers',
               y, size=9.6, leading=13, after=4)
 y = paragraph(f'<link href="mailto:{escape(DATA["basics"]["email"])}">{escape(DATA["basics"]["email"])}</link>'
               f' | {escape(DATA["basics"]["phone"])} | Genoa, Italy', y, size=9.3, leading=12, after=3)
@@ -103,7 +103,7 @@ for index, work in enumerate(DATA['work']):
     if index == 0:
         highlights = highlights[:2] + [highlights[2]]
     elif index == 1:
-        highlights = highlights[:3]
+        highlights = [highlights[0], highlights[1], highlights[3]]
     for item in highlights:
         y = bullet(item, y)
     y -= 5
@@ -124,10 +124,11 @@ right_bottom = y
 y = section('Technical Skills', top, MARGIN, LEFT_WIDTH)
 skill_lookup = {skill['name']: skill['keywords'] for skill in DATA['skills']}
 for title, keys in [
+    ('Generative Models', ['Generative Modeling']),
+    ('Learning and Evaluation', ['Learning and Evaluation']),
     ('Programming', ['Programming']),
-    ('Machine Learning', ['ML Frameworks']),
-    ('Training and Tools', ['Model Training', 'Tools']),
-    ('Systems', ['Systems']),
+    ('Frameworks', ['ML Frameworks']),
+    ('Tools and Training', ['Tools and Training']),
 ]:
     y = paragraph(escape(title), y, MARGIN, LEFT_WIDTH, size=9.4, leading=12,
                   after=2, font='Lato-Bold')
@@ -148,9 +149,6 @@ for education in DATA['education']:
                       size=9.1, leading=11.7, after=7)
     y -= 3
 
-y = section('Research Focus', y, MARGIN, LEFT_WIDTH)
-y = paragraph(escape('; '.join(skill_lookup['Research Focus'])) + '.', y, MARGIN, LEFT_WIDTH,
-              size=9.1, leading=11.7, after=4)
 y = section('Languages', y, MARGIN, LEFT_WIDTH)
 for language in DATA['languages']:
     fluency = 'native' if language['fluency'] == 'Native speaker' else language['fluency'].lower()

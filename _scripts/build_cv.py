@@ -30,7 +30,6 @@ PAGE_W, PAGE_H = A4
 MARGIN = 41
 WIDTH = PAGE_W - 2 * MARGIN
 OUTPUT = ROOT / 'assets/pdf/Ariel_Gjaci_CV.pdf'
-UPDATED = DATA['meta']['lastModified']
 c = canvas.Canvas(str(OUTPUT), pagesize=A4, pageCompression=1)
 c.setTitle('Ariel Gjaci - Curriculum Vitae')
 c.setAuthor(DATA['basics']['name'])
@@ -68,7 +67,7 @@ def dates(start, end=None):
 def footer(number):
     c.setFont('Lato', 8)
     c.setFillColor(MUTED)
-    c.drawString(MARGIN, 24, 'Ariel Gjaci | Updated 20 October 2026')
+    c.drawString(MARGIN, 24, 'Ariel Gjaci')
     c.drawRightString(PAGE_W - MARGIN, 24, f'{number} / 2')
 
 
@@ -79,7 +78,7 @@ y = paragraph('Postdoctoral Researcher | Multimodal Generative Learning | Spatia
               size=10, leading=14, after=5)
 y = paragraph('<link href="mailto:ariel.gjaci@iit.it">ariel.gjaci@iit.it</link> | +39 348 377 6041 | Genoa, Italy',
               y, size=9.8, leading=13, after=4)
-links = [('arielgjaci.com', DATA['basics']['url'])] + [(x['network'], x['url']) for x in DATA['basics']['profiles']]
+links = [('Website', DATA['basics']['url'])] + [(x['network'], x['url']) for x in DATA['basics']['profiles']]
 y = paragraph(' | '.join(f'<link href="{escape(url)}" color="#225b70">{escape(label)}</link>' for label, url in links),
               y, size=9.8, leading=13, after=9)
 y = paragraph(escape(DATA['basics']['summary']), y, after=3)

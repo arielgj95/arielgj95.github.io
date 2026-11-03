@@ -67,29 +67,18 @@
       "position": "Software Engineer",
       "startDate": "2021-05",
       "endDate": "2021-10",
-      "highlights": [
-        "Developed Python backend software for aircraft panels and presented a working demo to stakeholders."
-      ],
+      "highlights": ["Developed Python backend software for aircraft panels and presented a working demo to stakeholders."],
       "location": "Italy"
     }
   ],
   "skills": [
     {
       "name": "Generative Modeling",
-      "keywords": [
-        "Diffusion transformers",
-        "Flow matching",
-        "Multimodal conditioning",
-        "GANs"
-      ]
+      "keywords": ["Diffusion transformers", "Flow matching", "Multimodal conditioning", "GANs"]
     },
     {
       "name": "Learning and Evaluation",
-      "keywords": [
-        "Representation learning",
-        "Domain generalization",
-        "Generative model evaluation"
-      ]
+      "keywords": ["Representation learning", "Domain generalization", "Generative model evaluation"]
     },
     {
       "name": "Programming",
@@ -113,9 +102,7 @@
       "studyType": "Ph.D.",
       "startDate": "2021-11",
       "endDate": "2025-05",
-      "courses": [
-        "Research collaboration with King's College London; thesis defended in May 2025."
-      ]
+      "courses": ["Research collaboration with King's College London; thesis defended in May 2025."]
     },
     {
       "institution": "University of Genoa",

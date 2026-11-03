@@ -8,9 +8,7 @@
     - name: Phone
       value: "+393483776041"
     - name: Bio
-      value: Postdoctoral researcher with a PhD in Artificial Intelligence and Robotics. Develops multimodal generative
-        models for human motion and spatial audio, combining diffusion transformers, representation learning, dataset
-        development, and experimental evaluation in Python and PyTorch.
+      value: Postdoctoral researcher with a PhD in Artificial Intelligence and Robotics. Builds multimodal generative models and research prototypes for spatial audio and human motion, combining representation learning, dataset development, and controlled experimental validation in Python and PyTorch.
 - title: Professional Experience
   type: time_table
   contents:
@@ -19,11 +17,9 @@
       year: 2025-02-17 - Present
       description:
         - Multimodal learning and spatial audio for immersive environments in the European XTREME project.
-        - Developing few-shot room impulse response generation from audio and depth, with counterfactual training for
-          reverberation control (ongoing research).
-        - Built Eigenmike 64 processing pipelines for beamforming, binaural rendering, and acoustic mapping on 3D room
-          point clouds.
-        - Implemented audio/video synchronization and 360-degree acoustic overlays for spatial-audio recordings.
+        - Developing frame-resolved codec conditioning for few-shot room impulse response synthesis from sparse audio, geometry, and depth (manuscript in preparation for CVPR 2027).
+        - Designed matched model comparisons, multi-seed ablations, and room-level evaluation to study conditioning representations and generalization.
+        - Built Eigenmike 64 pipelines for beamforming, binaural rendering, and acoustic mapping on 3D room point clouds.
     - title: PhD Researcher
       institution: University of Genoa
       year: 2021-11 - 2025-05
@@ -50,6 +46,7 @@
     - title: Generative Modeling
       items:
         - Diffusion transformers
+        - Flow matching
         - GANs
         - Multimodal conditioning
     - title: Learning and Evaluation

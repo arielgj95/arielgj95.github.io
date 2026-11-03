@@ -93,28 +93,15 @@
     },
     {
       "name": "Programming",
-      "keywords": [
-        "Python",
-        "C/C++",
-        "MATLAB/Simulink"
-      ]
+      "keywords": ["Python", "C/C++", "MATLAB/Simulink"]
     },
     {
       "name": "ML Frameworks",
-      "keywords": [
-        "PyTorch",
-        "Scikit-learn",
-        "TensorFlow"
-      ]
+      "keywords": ["PyTorch", "Scikit-learn", "TensorFlow"]
     },
     {
       "name": "Tools and Training",
-      "keywords": [
-        "Git",
-        "Linux",
-        "SLURM",
-        "Data parallelism"
-      ]
+      "keywords": ["Git", "Linux", "SLURM", "Data parallelism"]
     }
   ],
   "education": [

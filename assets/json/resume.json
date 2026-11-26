@@ -39,7 +39,7 @@
       "startDate": "2025-02-17",
       "summary": "Multimodal learning and spatial audio for immersive environments in the European XTREME project.",
       "highlights": [
-        "Investigating how to condition an existing room impulse response generator using a few acoustic measurements, geometry, and depth images (manuscript in preparation for CVPR 2027).",
+        "Investigating how to condition an existing room impulse response generator using a few acoustic measurements, geometry, and depth images (manuscript submitted to CVPR 2027).",
         "Evaluating audio representations through controlled model comparisons, repeated training runs, and evaluation across unseen rooms.",
         "Built Eigenmike 64 processing pipelines for beamforming, binaural rendering, and acoustic mapping on 3D room point clouds."
       ],

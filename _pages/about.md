@@ -29,6 +29,6 @@ latest_posts:
 
 I’m a postdoctoral researcher at the [Italian Institute of Technology (IIT)](https://www.iit.it/en-US/home). During my Ph.D. in Artificial Intelligence and Robotics, I developed machine learning models that generate gestures to accompany speech while taking cultural context into account. This work includes [SICAGE, presented at ECCV 2026](/sicage/).
 
-At IIT, I developed a way to capture how sound changes over time in a few acoustic measurements and feed that information into an existing model. The goal was to predict how sound arrives and reverberates in rooms the model hadn’t seen before. I submitted this work to CVPR 2027.
+At IIT, I studied how the temporal information in audio representations affects a model’s ability to predict room impulse responses at new positions, given only a few audio and visual observations of the same room. A room impulse response describes how sound reaches a listener over time, including reflections. I submitted this work to CVPR 2027.
 
 I’m interested in deepening my understanding of machine learning and using it to tackle complex problems across different fields.

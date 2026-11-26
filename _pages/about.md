@@ -27,17 +27,8 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-I am a Postdoctoral Researcher at [IIT](https://www.iit.it/en-US/home) with a multidisciplinary background spanning biomedical engineering, robotics, and artificial intelligence.
-I earned a Bachelor's degree in Biomedical Engineering in 2018, a Master's degree in Robotics Engineering in 2021, and a Ph.D. in Artificial Intelligence and Robotics in 2025.
-During my Ph.D., I focused on culture-aware gesture generation for social robots, applying deep generative and classical machine learning models. My contributions span generative gesture models, cultural analysis, and semantic gesture labeling, with publications in the International Journal of Social Robotics, IEEE RO-MAN, and [ECCV 2026 (SICAGE)](/sicage/).
-My main contributions include:
+I’m a postdoctoral researcher at the [Italian Institute of Technology (IIT)](https://www.iit.it/en-US/home). During my Ph.D. in Artificial Intelligence and Robotics, I developed machine learning models that generate gestures to accompany speech while taking cultural context into account. This work includes [SICAGE, presented at ECCV 2026](/sicage/).
 
-- Creating and releasing TED4C-L: 106.45 hours from 764 speakers across four cultural groups, aligning motion extracted with MMPose with audio and text.
-- Analyzing cultural cues in interaction and affective data using classical and deep learning models (AIRO 2022; AHRI at ACII 2024).
-- Designing a culture embedding framework that captures cultural cues while reducing dependence on speaker identity through domain generalization techniques like Fishr and Adversarial Learning.
-- Developing ALaDiT, a multimodal diffusion transformer for co-speech gestures conditioned on speech, text, and cultural context. It generates four seconds of motion in under 14 ms on a single RTX 3090.
-- Developing rule-based algorithms using Semantic Similarity to identify gestures.
+At IIT, I studied how a few acoustic measurements can help a model predict how sound travels from a source to a listener in rooms it hasn’t seen before. I submitted this work to CVPR 2027.
 
-Currently, I contribute to the [XTREME European Project](https://xtremeitu.dk/) at IIT, working on spatial audio for immersive environments. My ongoing research investigates how to condition an existing room impulse response generator using a few acoustic measurements, source/receiver geometry, and depth images. I study how to represent the acoustic measurements and provide them to FLAC, an existing generative model, while keeping its generator architecture unchanged. I evaluate these representations through controlled model comparisons, repeated training runs, and evaluation across unseen rooms. This work is a manuscript in preparation for CVPR 2027. I also develop Eigenmike 64 processing tools for beamforming, binaural audio, and acoustic visualization on 3D room point clouds.
-
-My work connects conditional generation, multimodal representation learning, and evaluation across human motion and spatial audio.
+I’m interested in deepening my understanding of machine learning and using it to tackle complex problems across different fields.
